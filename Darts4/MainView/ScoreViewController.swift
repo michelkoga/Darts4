@@ -377,6 +377,7 @@ class ScoreViewController: MotherViewController {
 //		keyboardBottomConstraint.constant = 250
 		
 		keyboardView.isHidden = true
+		tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
 		
 		UIView.animate(withDuration: 0.3, animations: {
 			self.view.layoutIfNeeded()
@@ -390,7 +391,7 @@ class ScoreViewController: MotherViewController {
 //		keyboardBottomConstraint.constant = 0
 		
 		keyboardView.isHidden = false
-		
+		tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = false
 		UIView.animate(withDuration: 0.3, animations: {
 			self.view.layoutIfNeeded()
 		})
