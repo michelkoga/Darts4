@@ -1,0 +1,86 @@
+DOING:
+- Don't forget to commit.
+- Create a Player Stats view.
+
+NEED FIX:
+- Cancel option in finish.
+
+FIXED??:
+- Crazy when more than 3 keys inputed (becomes blank)
+
+
+wellness, standard
+TODO:
+- Mais um header para 251 etc (Com o nome do player)
+- Create a Competition System(normal victory 2 points, penalty 1, lose 0)
+    - Quarter, semi and Finals, and second place.
+- Print results
+- Separate database for game style, standard wellness
+- Criar um Belo AppIcon
+- One more throw to winner when all
+- Limit when finish is possible, and limit number of X darts if necessary
+- Languages
+- Criar um Belo AppIcon
+
+
+
+NEXT IDEAS:
+- servers
+- flower recognition
+- golf
+
+
+PROBLEMS:
+
+SOLVED HARD PROBLEMS:
+- Label doens't show complete text (Fixed using setTitle(xx) instead of title.text = xx)
+- Code inside a alert view will run before alert view select.
+- Color in label doesn't show: The reason is that the class ran before the array construction, so all the labels where nil because it had no text. Solved runing the algorithm inside the table construction.
+
+TRY AGAIN LATER:
+- Number of players, with setNeedsDisplay
+- Fix darts number final score (Put X2 etc in label)
+	- if goes 0 -> ask X1,X2,X3 -> win or B
+- Reset Key in Settings
+- Better Game object and Player Object.
+
+LAST TODO:
+- Check Real darts boards
+- Reset in settings not working
+
+MAYBE IMPROVABLE:
+- Add Lines
+- Setting button unable until game end
+
+DONE:
+- Wire keyboard
+- Create scores and toGo's algorithm
+- Reset Buton in Keyboard
+- if goes minus number B (Done in a different way, with a burst/win indicator)
+- Insert B
+- Fix settings players and all players
+- fix width in differents ipads
+- Set toGo Label
+- Fix main view players so it can show all players depending on the number of players.
+- Max 3 characters in score
+- Max 180 points in score
+- B equals Zero
+- round in big scores (more than 100)
+- 251 max 90 50 maru
+- 151,251,301,501,701,1001
+- Setting, reset Buttons on the header
+- Backdelete Button.
+- End Game or Continue popup menu when finnished
+- 9,10,12,15,20 Checar com o Katayama-san
+- Confirm Reset when going to settings?
+- Count sets.
+- Keyboard Hide Buttons and panel touch to show keyboard
+- Check (reset game?) when close settings (when Done Button pressed) -> Actually I changed the design, this will not be needed.
+- Avoid repeat and blank Names when adding new players
+- Start creating players data
+- Player Object for Core Data.
+- Center word after the last row.
+
+
+REVIEW AGAIN:
+- Laguages Change (eg. Language.portuguese) Increase languages
