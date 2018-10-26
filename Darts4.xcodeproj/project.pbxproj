@@ -12,6 +12,7 @@
 		DE1C98682169AD5E00A1E221 /* Darts4.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE1C98662169AD5E00A1E221 /* Darts4.xcdatamodeld */; };
 		DE1C986A2169AD5F00A1E221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE1C98692169AD5F00A1E221 /* Assets.xcassets */; };
 		DE1C986D2169AD5F00A1E221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1C986B2169AD5F00A1E221 /* LaunchScreen.storyboard */; };
+		DE1F29112183635A000F1F5E /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = DE1F29102183635A000F1F5E /* TODO */; };
 		DE201F9A216C6F6900DDD686 /* MotherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE201F99216C6F6900DDD686 /* MotherViewController.swift */; };
 		DE201F9E216CBE4500DDD686 /* ScoreboardTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE201F9D216CBE4500DDD686 /* ScoreboardTableView.swift */; };
 		DE201FA0216CCE5800DDD686 /* SettingsLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE201F9F216CCE5800DDD686 /* SettingsLabels.swift */; };
@@ -51,6 +52,7 @@
 		DE1C98692169AD5F00A1E221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE1C986C2169AD5F00A1E221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE1C986E2169AD5F00A1E221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE1F29102183635A000F1F5E /* TODO */ = {isa = PBXFileReference; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		DE201F99216C6F6900DDD686 /* MotherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherViewController.swift; sourceTree = "<group>"; };
 		DE201F9D216CBE4500DDD686 /* ScoreboardTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardTableView.swift; sourceTree = "<group>"; };
 		DE201F9F216CCE5800DDD686 /* SettingsLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLabels.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		DE1C98532169AD5E00A1E221 = {
 			isa = PBXGroup;
 			children = (
+				DE1F29102183635A000F1F5E /* TODO */,
 				DE1C985E2169AD5E00A1E221 /* Darts4 */,
 				DE1C985D2169AD5E00A1E221 /* Products */,
 			);
@@ -291,6 +294,7 @@
 			files = (
 				DE1C986D2169AD5F00A1E221 /* LaunchScreen.storyboard in Resources */,
 				DE1C986A2169AD5F00A1E221 /* Assets.xcassets in Resources */,
+				DE1F29112183635A000F1F5E /* TODO in Resources */,
 				DE1C98652169AD5E00A1E221 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
