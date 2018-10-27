@@ -141,14 +141,14 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xth-dj-BGe" customClass="ScoreboardTableView" customModule="Darts4" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="112" width="375" height="323"/>
+                                <rect key="frame" x="0.0" y="144" width="375" height="323"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="QXb-cw-Klm">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="rnQ-8V-Afv">
-                                            <rect key="frame" x="0.0" y="0.0" width="667" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Name" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Orh-kQ-92O" customClass="BoardLabel" customModule="Darts4" customModuleProvider="target">
                                                     <rect key="frame" x="-70" y="0.0" width="70" height="60"/>
@@ -166,7 +166,7 @@
                                                     <variation key="heightClass=regular-widthClass=regular" hidden="NO"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="GVa-gF-wRL" customClass="ScoreLabel" customModule="Darts4" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="82.5" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="HkP-kU-nwb">
                                                             <variation key="heightClass=regular-widthClass=compact" constant="70"/>
@@ -183,7 +183,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PSY-4J-rEZ" customClass="BoardLabel" customModule="Darts4" customModuleProvider="target">
-                                                    <rect key="frame" x="157" y="0.0" width="70" height="60"/>
+                                                    <rect key="frame" x="82.5" y="0.0" width="70" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="MOV-Uj-lBu">
                                                             <variation key="heightClass=regular-widthClass=compact" constant="70"/>
@@ -200,7 +200,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="VS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cZ7-7e-wcf" customClass="turnLabel" customModule="Darts4" customModuleProvider="target">
-                                                    <rect key="frame" x="298.5" y="0.0" width="70" height="60"/>
+                                                    <rect key="frame" x="152.5" y="0.0" width="70" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="C7n-de-Kld">
                                                             <variation key="heightClass=regular-widthClass=compact" constant="70"/>
@@ -217,7 +217,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="1GF-Hg-p8Z" customClass="ScoreLabel" customModule="Darts4" customModuleProvider="target">
-                                                    <rect key="frame" x="440.5" y="0.0" width="70" height="60"/>
+                                                    <rect key="frame" x="222.5" y="0.0" width="70" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="rzm-6x-5xu">
                                                             <variation key="heightClass=regular-widthClass=compact" constant="70"/>
@@ -234,7 +234,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xba-c3-Nox" customClass="BoardLabel" customModule="Darts4" customModuleProvider="target">
-                                                    <rect key="frame" x="567" y="0.0" width="100" height="60"/>
+                                                    <rect key="frame" x="292.5" y="0.0" width="82.5" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Lrh-wE-w26">
                                                             <variation key="heightClass=regular-widthClass=compact" constant="70"/>
@@ -251,7 +251,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Name" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnF-Ol-ZnN" customClass="BoardLabel" customModule="Darts4" customModuleProvider="target">
-                                                    <rect key="frame" x="667" y="0.0" width="70" height="60"/>
+                                                    <rect key="frame" x="375" y="0.0" width="70" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="5b4-yf-x08">
                                                             <variation key="heightClass=regular-widthClass=compact" constant="70"/>
@@ -276,11 +276,7 @@
                                         <constraint firstItem="rnQ-8V-Afv" firstAttribute="top" secondItem="QXb-cw-Klm" secondAttribute="top" id="G3q-ar-qHL"/>
                                         <constraint firstAttribute="bottom" secondItem="rnQ-8V-Afv" secondAttribute="bottom" id="dbU-TT-Zv0"/>
                                         <constraint firstAttribute="trailing" secondItem="rnQ-8V-Afv" secondAttribute="trailing" id="er7-JI-ezC"/>
-                                        <constraint firstAttribute="bottom" secondItem="rnQ-8V-Afv" secondAttribute="bottom" id="gsU-BY-cwz"/>
                                         <constraint firstItem="rnQ-8V-Afv" firstAttribute="leading" secondItem="QXb-cw-Klm" secondAttribute="leading" id="mMX-4p-5hP"/>
-                                        <constraint firstItem="rnQ-8V-Afv" firstAttribute="top" secondItem="QXb-cw-Klm" secondAttribute="top" id="qmf-In-Q4J"/>
-                                        <constraint firstAttribute="trailing" secondItem="rnQ-8V-Afv" secondAttribute="trailing" id="xG3-92-pGw"/>
-                                        <constraint firstItem="rnQ-8V-Afv" firstAttribute="leading" secondItem="QXb-cw-Klm" secondAttribute="leading" id="zvk-aA-bVd"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
@@ -705,7 +701,7 @@
                                         <variation key="heightClass=regular-widthClass=regular" constant="120"/>
                                     </constraint>
                                     <constraint firstAttribute="height" constant="300" id="Wp5-qq-qp2">
-                                        <variation key="heightClass=compact-widthClass=compact" constant="200"/>
+                                        <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
                                         <variation key="heightClass=regular-widthClass=compact" constant="200"/>
                                         <variation key="heightClass=regular-widthClass=regular" constant="250"/>
                                     </constraint>
