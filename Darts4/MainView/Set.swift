@@ -20,8 +20,11 @@ struct Set {
 	var toGoB: String
 	
 	var turnNumber: String
+	
+	var isBurst = false
+	var isLast = false
 }
-struct game {
+struct Game {
 	var sets = [Set]()
 	
 }

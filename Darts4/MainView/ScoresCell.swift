@@ -17,14 +17,14 @@ class ScoresCell: UITableViewCell {
 		self.selectionStyle = .none
 		
 		
-		if self.playerA.text == "" {
-			//			drawHorizontalLine()
-			if self.toGoA.text != "" {
-				drawACircle()
-			}
-			if self.scoreB.text != "" {
-				drawBCircle()
-			}
+		if self.setNumber.tag == 99 {
+			drawHorizontalLine()
+//			if self.toGoA.text != "" {
+//				drawACircle()
+//			}
+//			if self.scoreB.text != "" {
+//				drawBCircle()
+//			}
 		}
 		
 	}
@@ -88,5 +88,6 @@ class ScoresCell: UITableViewCell {
 		toGoB.text = set.toGoB
 		
 		setNumber.text = set.turnNumber
+		
 	}
 }

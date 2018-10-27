@@ -16,21 +16,21 @@ class ScoreboardTableView: UITableView {
 		
 		
 		// MARK: Vertical white lines
-		let upCenterLeft = CGPoint(x: ((self.bounds.width/2) - 30), y: 3)
-		let upCenterRight = CGPoint(x: ((self.bounds.width/2) + 30), y: 3)
-
-		let downCenterLeft = CGPoint(x: ((self.bounds.width/2) - 30), y: self.bounds.height * 2)
-		let downCenterRight = CGPoint(x: ((self.bounds.width/2) + 30), y: self.bounds.height * 2)
-		
-		let context = UIGraphicsGetCurrentContext()
-		context?.setLineWidth(5.0)
-		context?.setStrokeColor(UIColor.white.cgColor)
-		context?.move(to: upCenterLeft)
-		context?.addLine(to: downCenterLeft)
-		context?.move(to: upCenterRight)
-		context?.addLine(to: downCenterRight)
-		
-		context?.strokePath()
+//		let upCenterLeft = CGPoint(x: ((self.bounds.width/2) - 30), y: 3)
+//		let upCenterRight = CGPoint(x: ((self.bounds.width/2) + 30), y: 3)
+//
+//		let downCenterLeft = CGPoint(x: ((self.bounds.width/2) - 30), y: self.bounds.height * 2)
+//		let downCenterRight = CGPoint(x: ((self.bounds.width/2) + 30), y: self.bounds.height * 2)
+//		
+//		let context = UIGraphicsGetCurrentContext()
+//		context?.setLineWidth(5.0)
+//		context?.setStrokeColor(UIColor.white.cgColor)
+//		context?.move(to: upCenterLeft)
+//		context?.addLine(to: downCenterLeft)
+//		context?.move(to: upCenterRight)
+//		context?.addLine(to: downCenterRight)
+//		
+//		context?.strokePath()
 		
 		
 		// MARK: Subtle Lines:

@@ -13,6 +13,8 @@
 		DE1C986A2169AD5F00A1E221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE1C98692169AD5F00A1E221 /* Assets.xcassets */; };
 		DE1C986D2169AD5F00A1E221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1C986B2169AD5F00A1E221 /* LaunchScreen.storyboard */; };
 		DE1F29112183635A000F1F5E /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = DE1F29102183635A000F1F5E /* TODO */; };
+		DE1F291321849B14000F1F5E /* ScoreFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F291221849B14000F1F5E /* ScoreFooter.swift */; };
+		DE1F29152184A669000F1F5E /* FooterLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F29142184A669000F1F5E /* FooterLabels.swift */; };
 		DE201F9A216C6F6900DDD686 /* MotherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE201F99216C6F6900DDD686 /* MotherViewController.swift */; };
 		DE201F9E216CBE4500DDD686 /* ScoreboardTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE201F9D216CBE4500DDD686 /* ScoreboardTableView.swift */; };
 		DE201FA0216CCE5800DDD686 /* SettingsLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE201F9F216CCE5800DDD686 /* SettingsLabels.swift */; };
@@ -53,6 +55,8 @@
 		DE1C986C2169AD5F00A1E221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE1C986E2169AD5F00A1E221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE1F29102183635A000F1F5E /* TODO */ = {isa = PBXFileReference; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
+		DE1F291221849B14000F1F5E /* ScoreFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreFooter.swift; sourceTree = "<group>"; };
+		DE1F29142184A669000F1F5E /* FooterLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterLabels.swift; sourceTree = "<group>"; };
 		DE201F99216C6F6900DDD686 /* MotherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherViewController.swift; sourceTree = "<group>"; };
 		DE201F9D216CBE4500DDD686 /* ScoreboardTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardTableView.swift; sourceTree = "<group>"; };
 		DE201F9F216CCE5800DDD686 /* SettingsLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLabels.swift; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				DE4F1FB0216B8F7200607D29 /* ScoreViewController.swift */,
+				DE1F291221849B14000F1F5E /* ScoreFooter.swift */,
+				DE1F29142184A669000F1F5E /* FooterLabels.swift */,
 				DE3ABE132181BDA9003D3E84 /* TableViewDataSourceDelegate.swift */,
 				DE201F9D216CBE4500DDD686 /* ScoreboardTableView.swift */,
 				DE4F1FAA216B8D7000607D29 /* ScoresCell.swift */,
@@ -326,9 +332,11 @@
 				DE1C98602169AD5E00A1E221 /* AppDelegate.swift in Sources */,
 				DEB13AA3216B9C6900107DFD /* BoardLabel.swift in Sources */,
 				DE4F1FB1216B8F7200607D29 /* ScoreViewController.swift in Sources */,
+				DE1F29152184A669000F1F5E /* FooterLabels.swift in Sources */,
 				DE3ABE122181BA9F003D3E84 /* UnderGraphsView.swift in Sources */,
 				DE3ABE102181BA6F003D3E84 /* MotherGraphsView.swift in Sources */,
 				DE99EAD1217DDB35001EFF61 /* StatsViewController.swift in Sources */,
+				DE1F291321849B14000F1F5E /* ScoreFooter.swift in Sources */,
 				DE3ABE142181BDA9003D3E84 /* TableViewDataSourceDelegate.swift in Sources */,
 				DEA862102174744E0041EDA3 /* Languages.swift in Sources */,
 				DE201F9A216C6F6900DDD686 /* MotherViewController.swift in Sources */,

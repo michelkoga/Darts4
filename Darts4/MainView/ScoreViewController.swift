@@ -74,6 +74,8 @@ class ScoreViewController: MotherViewController {
 	
 	@IBOutlet weak var hideKeyboardButton: BigButton!
 	
+	@IBOutlet weak var footerALabel: UILabel!
+	@IBOutlet weak var footerBLabel: UILabel!
 	// MARK:
 	// MARK: VARIABLES
 	// MARK:
@@ -467,7 +469,7 @@ class ScoreViewController: MotherViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
+		setFooter()
 //		keyboardHeightSetter = keyboardHeightConstraint.constant
 		let insets = UIEdgeInsets(top: 0, left: 0, bottom: 300, right: 0)
 		self.tableView.contentInset = insets
@@ -494,7 +496,9 @@ class ScoreViewController: MotherViewController {
 		stateB = Array(repeating: 0, count: turnsNumber)
 		headerAToGo.text = String(startingToGo)
 		headerBToGo.text = String(startingToGo)
+		
 		sets = updateTableView()
+		
 		tableView.reloadData()
 		
 		// Set labels language:
@@ -722,7 +726,7 @@ class ScoreViewController: MotherViewController {
 			}
 			if toGoesB[i + 1] != nil { toGoB = String(toGoesB[i + 1]!) }
 			
-			let set = Set.init(playerA: "", playerB: "", scoreA: scoreA, scoreB: scoreB, toGoA: toGoA, toGoB: toGoB, turnNumber: String(turn))
+			let set = Set.init(playerA: "", playerB: "", scoreA: scoreA, scoreB: scoreB, toGoA: toGoA, toGoB: toGoB, turnNumber: String(turn), isBurst: false, isLast: false)
 			tempSets.append(set)
 			turn += 3
 		}
@@ -736,21 +740,8 @@ class ScoreViewController: MotherViewController {
 			else { index = 0 }
 		}
 		// Add One More Set(Center):
-		let centerSet: Set = Set(playerA: "", playerB: "", scoreA: "", scoreB: "", toGoA: "", toGoB: "", turnNumber: "C")
+		let centerSet: Set = Set(playerA: "", playerB: "", scoreA: "", scoreB: "", toGoA: "", toGoB: "", turnNumber: "C", isBurst: false, isLast: false)
 		tempSets.append(centerSet)
-		// Add last set(Darts throw count):
-		var throwsCountSet: Set = Set(playerA: "", playerB: "", scoreA: "", scoreB: "", toGoA: "", toGoB: "", turnNumber: "D")
-		if isGameOver {
-			switch legWinner {
-			case "A":
-				throwsCountSet.toGoA = numberOfDarts
-			case "B":
-				throwsCountSet.scoreB = numberOfDarts
-			default:
-				break
-			}
-		}
-		tempSets.append(throwsCountSet)
 		
 		return tempSets
 	}
