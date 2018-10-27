@@ -79,7 +79,8 @@ class ScoreViewController: MotherViewController {
 	// MARK:
 	// MARK: VARIABLES
 	// MARK:
-	var finish = 0
+	var finishA = 0
+	var finishB = 0
 	var keyboardHeightSetter: CGFloat = 300
 	// MARK: CORE DATA:
 	var playersToSaveA = [PlayerToSave]()
@@ -130,7 +131,7 @@ class ScoreViewController: MotherViewController {
 						if let restScore = Int(sets[index - 1].toGoA) {
 							if legWinner == "A" {
 								playersToSaveA[ind].scores.append(restScore)
-								playersToSaveA[ind].turns += finish
+								playersToSaveA[ind].turns += finishA
 								//								print("RestScore saved.")
 							}
 						}
@@ -151,7 +152,7 @@ class ScoreViewController: MotherViewController {
 						if let restScore = Int(sets[index - 1].toGoB) {
 							if legWinner == "B" {
 								playersToSaveB[ind].scores.append(restScore)
-								playersToSaveB[ind].turns += finish
+								playersToSaveB[ind].turns += finishB
 								//								print("RestScore saved.")
 							}
 						}
@@ -469,7 +470,7 @@ class ScoreViewController: MotherViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		setFooter()
+		
 //		keyboardHeightSetter = keyboardHeightConstraint.constant
 		let insets = UIEdgeInsets(top: 0, left: 0, bottom: 300, right: 0)
 		self.tableView.contentInset = insets
@@ -644,107 +645,6 @@ class ScoreViewController: MotherViewController {
 		tableView.reloadData()
 		self.view.setNeedsDisplay()
 	}
-	func askDartsNumber() {
-		var maxScore = 90
-		if defaults.contains(key: "maxScore") {
-			maxScore = defaults.integer(forKey: "maxScore")
-		}
-		
-		switch teamTurn {
-		case 0:
-			if toGoesA[row] == nil  { return }
-			if toGoesA[row]! > maxScore  { return }
-		case 1:
-			if toGoesB[row] == nil  { return }
-			if toGoesB[row]! > maxScore { return }
-		default:
-			break
-			
-		}
-		let doubleAsk = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-		doubleAsk.addAction(UIAlertAction(title: "One Dart", style: .default, handler: { (action: UIAlertAction!) in
-			setNumberOfDarts(number: 1)
-		}))
-		doubleAsk.addAction(UIAlertAction(title: "Two Darts", style: .default, handler: { (action: UIAlertAction!) in
-			setNumberOfDarts(number: 2)
-		}))
-		doubleAsk.addAction(UIAlertAction(title: "Three Darts", style: .default, handler: { (action: UIAlertAction!) in
-			setNumberOfDarts(number: 3)
-		}))
-		doubleAsk.popoverPresentationController?.sourceView = self.view
-		doubleAsk.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
-		doubleAsk.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
-		present(doubleAsk, animated: true, completion: nil)
-		
-		//
-		func setNumberOfDarts(number: Int) {
-			finish = number
-			gameStarted = true
-			isGameOver = true
-			switch teamTurn {
-			case 0:
-				sets[row].toGoA = "X\(number)"
-				scoresA[row] = toGoesA[row]
-				legsA += 1
-			case 1:
-				sets[row].toGoB = "X\(number)"
-				scoresB[row] = toGoesB[row]
-				legsB += 1
-			default:
-				break
-			}
-			tableView.reloadData()
-		}
-	}
-	func updateTableView() -> [Set] {
-		var tempSets: [Set] = []
-		
-		// Insert turn labels:
-		var turn = 3
-		for i in 0..<scoresA.count {
-			var scoreA = ""
-			var scoreB = ""
-			if scoresA[i] != nil { scoreA = String(scoresA[i]!) }
-			if scoresB[i] != nil { scoreB = String(scoresB[i]!) }
-			switch stateA[i] {
-			case 2:
-				scoreA = "B"
-			default:
-				break
-			}
-			switch stateB[i] {
-			case 2:
-				scoreB = "B"
-			default:
-				break
-			}
-			
-			var toGoA = ""
-			var toGoB = ""
-			if toGoesA[i + 1] != nil {
-				toGoA = String(toGoesA[i + 1]!)
-			}
-			if toGoesB[i + 1] != nil { toGoB = String(toGoesB[i + 1]!) }
-			
-			let set = Set.init(playerA: "", playerB: "", scoreA: scoreA, scoreB: scoreB, toGoA: toGoA, toGoB: toGoB, turnNumber: String(turn), isBurst: false, isLast: false)
-			tempSets.append(set)
-			turn += 3
-		}
-		// Insert player Names:
-		let indexA = playersA.count - 1
-		var index = 0
-		for i in 0..<scoresA.count {
-			tempSets[i].playerA = playersA[index]
-			tempSets[i].playerB = playersB[index]
-			if index < indexA { index += 1 }
-			else { index = 0 }
-		}
-		// Add One More Set(Center):
-		let centerSet: Set = Set(playerA: "", playerB: "", scoreA: "", scoreB: "", toGoA: "", toGoB: "", turnNumber: "C", isBurst: false, isLast: false)
-		tempSets.append(centerSet)
-		
-		return tempSets
-	}
 	
 	
 	
@@ -780,71 +680,7 @@ class ScoreViewController: MotherViewController {
 		}
 	}
 	
-	// 1 text Field Pointers
-	func setNextScoreField() {
-		// Last row case:
-		func showCenterNearestDartsAlert() {
-			let resetAlert = UIAlertController(title: "Select Winner", message: "Are You Sure?", preferredStyle: .alert)
-			resetAlert.addAction(UIAlertAction(title: "Team A", style: .default, handler: { (action: UIAlertAction!) in
-				setWinner(winner: "A")
-			}))
-			resetAlert.addAction(UIAlertAction(title: "Team B", style: .default, handler: { (action: UIAlertAction!) in
-				setWinner(winner: "B")
-			}))
-			resetAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
-				self.oneStepBack()
-			}))
-			present(resetAlert, animated: true, completion: nil)
-			func setWinner(winner: String) {
-				finish = 1
-				numberOfDarts = String((row * 3) + 1)
-				gameStarted = true
-				isGameOver = true
-				switch winner {
-				case "A":
-					legsA += 1
-				case "B":
-					legsB += 1
-				default:
-					print("nil?")
-					break
-				}
-				sets = updateTableView()
-				tableView.reloadData()
-			}
-		}
-		
-		//
-		if leg % 2 == 0 {
-			if teamTurn == 1 {
-				teamTurn = 0
-			} else {
-				if row < (turnsNumber - 1) {
-					row += 1
-				}
-				else {
-					showCenterNearestDartsAlert()
-					return
-				}
-				teamTurn = 1
-			}
-		} else {
-			if teamTurn == 0 {
-				teamTurn = 1
-			} else {
-				if row < (turnsNumber - 1) {
-					row += 1
-				}
-				else {
-					showCenterNearestDartsAlert()
-					return
-				}
-				teamTurn = 0
-			}
-		}
-		inputHolder = ""
-		
-	}
+	
 	func integerValueIsSmallerThanLimits(int: Int?) -> Bool  {
 		var maxScore = 90
 		if defaults.contains(key: "maxScore") {
@@ -894,6 +730,7 @@ class ScoreViewController: MotherViewController {
 		print(" ")
 	}
 	func newLeg() {
+		finishA = 0
 		leg += 1
 		resetArrays()
 		row = 0
@@ -908,6 +745,7 @@ class ScoreViewController: MotherViewController {
 		inputHolder = ""
 	}
 	func resetGame() {
+		finishB = 0
 		resetArrays()
 		row = 0
 		teamTurn = 0

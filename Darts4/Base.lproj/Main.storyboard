@@ -285,7 +285,7 @@
                                                         <constraint firstItem="rnQ-8V-Afv" firstAttribute="leading" secondItem="QXb-cw-Klm" secondAttribute="leading" id="mMX-4p-5hP"/>
                                                     </constraints>
                                                 </view>
-                                                <view key="tableFooterView" contentMode="scaleToFill" id="8pC-2b-gtw" customClass="FooterView" customModule="Darts4" customModuleProvider="target">
+                                                <view key="tableFooterView" contentMode="scaleToFill" id="8pC-2b-gtw">
                                                     <rect key="frame" x="0.0" y="124" width="320" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
@@ -305,7 +305,7 @@
                                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                                     </variation>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="4bY-Wb-6jS" customClass="FooterLabels" customModule="Darts4" customModuleProvider="target">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="4bY-Wb-6jS" customClass="TurnFooterLabel" customModule="Darts4" customModuleProvider="target">
                                                                     <rect key="frame" x="135" y="0.0" width="50" height="44"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
@@ -325,7 +325,7 @@
                                                                     <rect key="frame" x="185" y="0.0" width="135" height="44"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                                    <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                     <variation key="heightClass=regular-widthClass=compact">
                                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>

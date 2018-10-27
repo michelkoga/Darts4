@@ -16,9 +16,23 @@ class BoardLabel: UILabel {
 	}
 	
 }
+
 class turnLabel: BoardLabel {
 	override func draw(_ rect: CGRect) {
 		super.draw(rect)
+		
+		let verticalLine = UIGraphicsGetCurrentContext()
+		verticalLine?.setLineWidth(5.0)
+		verticalLine?.setStrokeColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
+		verticalLine?.move(to: CGPoint(x:3, y: 0))
+		verticalLine?.addLine(to: CGPoint(x: 3, y: self.layer.frame.height))
+		
+		verticalLine?.move(to: CGPoint(x: self.layer.frame.width - 3, y: 0))
+		verticalLine?.addLine(to: CGPoint(x: self.layer.frame.width - 3, y: self.layer.frame.height))
+		
+		verticalLine?.strokePath()
+		self.setNeedsDisplay()
+		
 	}
 }
 class ScoreLabel: BoardLabel {
