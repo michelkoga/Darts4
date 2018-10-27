@@ -450,7 +450,7 @@
                                                 </prototypes>
                                             </tableView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="Xth-dj-BGe" secondAttribute="bottom" id="Iim-Bl-Yvr"/>
                                             <constraint firstAttribute="trailing" secondItem="CCj-bd-hu1" secondAttribute="trailing" id="J7d-m3-BM7"/>
@@ -845,6 +845,7 @@
                         <outlet property="key7" destination="a87-63-PcH" id="gBA-ao-2FA"/>
                         <outlet property="key8" destination="TTQ-lB-U0b" id="2f6-zv-gJ3"/>
                         <outlet property="key9" destination="5dS-O3-5MW" id="928-mB-36v"/>
+                        <outlet property="keyboardHeightConstraint" destination="Wp5-qq-qp2" id="CkI-gY-vHL"/>
                         <outlet property="keyboardView" destination="JyE-Z3-Wt2" id="JaI-G3-FPo"/>
                         <outlet property="labelAScore" destination="dhf-aV-XUZ" id="BHa-08-8wc"/>
                         <outlet property="labelAToGo" destination="0L2-oV-QoD" id="WEJ-kO-kdQ"/>

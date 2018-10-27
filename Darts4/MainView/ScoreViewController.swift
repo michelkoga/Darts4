@@ -374,11 +374,10 @@ class ScoreViewController: MotherViewController {
 	func hideKeyboard() {
 //		keyboardTopConstraint.constant = 0
 //		tableViewBottomConstraints.constant = 0
-//		keyboardHeightConstraint.constant = 0
+		keyboardHeightConstraint.constant = 0
 //		keyboardBottomConstraint.constant = 250
 		
-		keyboardView.isHidden = true
-		tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+//		keyboardView.isHidden = true
 		
 		UIView.animate(withDuration: 0.3, animations: {
 			self.view.layoutIfNeeded()
@@ -391,8 +390,7 @@ class ScoreViewController: MotherViewController {
 //		keyboardHeightConstraint.constant = 250
 //		keyboardBottomConstraint.constant = 0
 		
-		keyboardView.isHidden = false
-		tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = false
+		keyboardHeightConstraint.constant = 200
 		UIView.animate(withDuration: 0.3, animations: {
 			self.view.layoutIfNeeded()
 		})
@@ -471,8 +469,8 @@ class ScoreViewController: MotherViewController {
 		super.viewDidLoad()
 		
 //		keyboardHeightSetter = keyboardHeightConstraint.constant
-		//		let insets = UIEdgeInsets(top: 0, left: 0, bottom: 400, right: 0)
-		//		self.tableView.contentInset = insets
+		let insets = UIEdgeInsets(top: 0, left: 0, bottom: 300, right: 0)
+		self.tableView.contentInset = insets
 		self.view.setGradientBackground(colorOne: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), colorTwo: #colorLiteral(red: 0.370555222, green: 0.3705646992, blue: 0.3705595732, alpha: 1))
 		self.tableView.separatorStyle = .none
 		//		self.tableView.backgroundColor = UIColor.black
