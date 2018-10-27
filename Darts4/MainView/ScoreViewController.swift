@@ -736,19 +736,22 @@ class ScoreViewController: MotherViewController {
 			if index < indexA { index += 1 }
 			else { index = 0 }
 		}
-		// Add One More Set:
-		var lastSet: Set = Set(playerA: "", playerB: "", scoreA: "", scoreB: "", toGoA: "", toGoB: "", turnNumber: "C")
+		// Add One More Set(Center):
+		let centerSet: Set = Set(playerA: "", playerB: "", scoreA: "", scoreB: "", toGoA: "", toGoB: "", turnNumber: "C")
+		tempSets.append(centerSet)
+		// Add last set(Darts throw count):
+		var throwsCountSet: Set = Set(playerA: "", playerB: "", scoreA: "", scoreB: "", toGoA: "", toGoB: "", turnNumber: "D")
 		if isGameOver {
 			switch legWinner {
 			case "A":
-				lastSet.toGoA = numberOfDarts
+				throwsCountSet.toGoA = numberOfDarts
 			case "B":
-				lastSet.scoreB = numberOfDarts
+				throwsCountSet.scoreB = numberOfDarts
 			default:
 				break
 			}
 		}
-		tempSets.append(lastSet)
+		tempSets.append(throwsCountSet)
 		
 		return tempSets
 	}
