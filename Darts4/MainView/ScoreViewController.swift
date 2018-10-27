@@ -11,6 +11,7 @@ import CoreData
 
 class ScoreViewController: MotherViewController {
 	// MARK: OUTLETS
+	// Constraints:
 	@IBOutlet weak var tableViewBottomConstraints: NSLayoutConstraint!
 	@IBOutlet weak var keyboardTopConstraint: NSLayoutConstraint!
 	@IBOutlet weak var keyboardHeightConstraint: NSLayoutConstraint!
