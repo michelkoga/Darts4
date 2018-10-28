@@ -1290,39 +1290,39 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WX8-qK-nvV">
                                 <rect key="frame" x="20" y="64" width="374" height="120"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="3eT-YH-q41">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="120"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="3eT-YH-q41">
+                                        <rect key="frame" x="0.0" y="10" width="374" height="100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VU7-xv-ayv">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="14.333333333333334"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="10.333333333333334"/>
                                                 <state key="normal" title="To Go"/>
                                                 <connections>
                                                     <action selector="setStartingToGo:" destination="IZA-ac-Nvm" eventType="touchUpInside" id="V77-Mj-qYs"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eME-4g-Sdh">
-                                                <rect key="frame" x="0.0" y="26.333333333333325" width="374" height="14.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="22.333333333333329" width="374" height="10.333333333333336"/>
                                                 <state key="normal" title="Number Of Turns"/>
                                                 <connections>
                                                     <action selector="setNumberOfTurnsAction:" destination="IZA-ac-Nvm" eventType="touchUpInside" id="VeA-ip-Yql"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OV5-Oi-JnY">
-                                                <rect key="frame" x="0.0" y="52.666666666666671" width="374" height="14.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="44.666666666666671" width="374" height="10.666666666666664"/>
                                                 <state key="normal" title="Set Number Of Players"/>
                                                 <connections>
                                                     <action selector="setNumberOfPlayersAction:" destination="IZA-ac-Nvm" eventType="touchUpInside" id="sfe-Ox-I2s"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMh-3l-JDe">
-                                                <rect key="frame" x="0.0" y="79.333333333333343" width="374" height="14.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="67.333333333333343" width="374" height="10.333333333333329"/>
                                                 <state key="normal" title="Number of Legs"/>
                                                 <connections>
                                                     <action selector="setNumberOfSets:" destination="IZA-ac-Nvm" eventType="touchUpInside" id="r1M-4M-Okf"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdN-FI-yFM">
-                                                <rect key="frame" x="0.0" y="105.66666666666666" width="374" height="14.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="89.666666666666657" width="374" height="10.333333333333329"/>
                                                 <state key="normal" title="Language"/>
                                                 <connections>
                                                     <action selector="setLanguage:" destination="IZA-ac-Nvm" eventType="touchUpInside" id="E88-t6-cdd"/>
@@ -1337,9 +1337,9 @@
                                     <constraint firstAttribute="height" constant="50" id="Qlv-Qh-ND1">
                                         <variation key="heightClass=regular-widthClass=compact" constant="120"/>
                                     </constraint>
-                                    <constraint firstItem="3eT-YH-q41" firstAttribute="top" secondItem="WX8-qK-nvV" secondAttribute="top" id="dmO-3b-ywj"/>
+                                    <constraint firstItem="3eT-YH-q41" firstAttribute="top" secondItem="WX8-qK-nvV" secondAttribute="top" constant="10" id="dmO-3b-ywj"/>
                                     <constraint firstItem="3eT-YH-q41" firstAttribute="leading" secondItem="WX8-qK-nvV" secondAttribute="leading" id="qnF-jj-A8O"/>
-                                    <constraint firstAttribute="bottom" secondItem="3eT-YH-q41" secondAttribute="bottom" id="uOl-FQ-1Zo"/>
+                                    <constraint firstAttribute="bottom" secondItem="3eT-YH-q41" secondAttribute="bottom" constant="10" id="uOl-FQ-1Zo"/>
                                     <constraint firstAttribute="trailing" secondItem="3eT-YH-q41" secondAttribute="trailing" id="yAD-xp-ogZ"/>
                                 </constraints>
                             </view>
@@ -1504,15 +1504,15 @@
                                     <constraint firstItem="By5-f5-ArC" firstAttribute="top" secondItem="2ZP-LD-kJy" secondAttribute="top" id="zjl-tw-wgb"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bxT-Ow-g4r">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="30" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bxT-Ow-g4r">
                                 <rect key="frame" x="0.0" y="220" width="414" height="472"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlayerSearchCell" id="QXe-NX-YBr" customClass="SearchTable" customModule="Darts4" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="30"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QXe-NX-YBr" id="X35-YA-ciI">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="29.666666666666668"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xqu-6i-Vgj">
