@@ -540,7 +540,8 @@ class ScoreViewController: MotherViewController {
 	// #######################################
 	// #######################################
 	func createTestData() {
-		
+		fetchAllPlayers()
+		print("####################################### allPlayersData: \(allPlayersData)")
 		
 		let names = ["John","Jonathan","Marco","Lucy","Michael","Matt","William","Sarah"]
 		let averages1: [Float] = [40, 45, 44, 46.2, 50, 48, 51, 50, 60, 55, 58, 60, 58, 62, 55, 66.2, 70, 64, 72, 68, 74, 80, 73, 81]
@@ -558,9 +559,12 @@ class ScoreViewController: MotherViewController {
 		guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
 		
 		for (index,name) in names.enumerated() {
-			
 			let context = appDelegate.persistentContainer.viewContext
-			
+			// MARK: Avoiding to create the same name.
+			for playerData in allPlayersData {
+				let nameData = playerData.value(forKey: "name") as? String
+				if nameData == name { return }
+			}
 			
 			let entity = NSEntityDescription.entity(forEntityName: "Player", in: context)!
 			let player = NSManagedObject(entity: entity, insertInto: context)
