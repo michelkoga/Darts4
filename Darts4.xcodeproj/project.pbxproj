@@ -126,6 +126,7 @@
 				DEB13A9E216B92C800107DFD /* KeyboardView */,
 				DEE8C54B21772AB9008C3F06 /* HistoryView */,
 				DEB13AA6216BA65F00107DFD /* Settings */,
+				DEE8C546217632D4008C3F06 /* Unused */,
 				DE1C98632169AD5E00A1E221 /* Main.storyboard */,
 				DEE8C54721770824008C3F06 /* NavigationController.swift */,
 				DE1C98692169AD5F00A1E221 /* Assets.xcassets */,
@@ -206,7 +207,6 @@
 				DE78F215216BBA99000F12C9 /* PlayersTableDelegate.swift */,
 				DEB13AA4216BA65900107DFD /* Settings.swift */,
 				DEB13AA7216BAF9B00107DFD /* SearchTable.swift */,
-				DEE8C546217632D4008C3F06 /* Unused */,
 			);
 			path = Settings;
 			sourceTree = "<group>";

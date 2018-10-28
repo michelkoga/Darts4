@@ -480,6 +480,7 @@ class ScoreViewController: MotherViewController {
 		tableView.delegate = self
 		tableView.dataSource = self
 		
+		createTestData()
 //		self.fetchAllPlayers()
 		
 	}
@@ -491,8 +492,7 @@ class ScoreViewController: MotherViewController {
 		toGoesA = Array(repeating: nil, count: turnsNumber + 1)
 		toGoesB = Array(repeating: nil, count: turnsNumber + 1)
 		
-		
-//		createTestData()
+
 		stateA = Array(repeating: 0, count: turnsNumber)
 		stateB = Array(repeating: 0, count: turnsNumber)
 		headerAToGo.text = String(startingToGo)

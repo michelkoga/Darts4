@@ -41,7 +41,8 @@ class SettingsViewController: MotherViewController, UITextFieldDelegate {
 	// MARK: OVERRIDES
 	override func viewDidLoad() {
         super.viewDidLoad()
-		
+		tableView.delegate = self
+		tableView.dataSource = self
 		playerA1.backgroundColor = UIColor.cyan
 //		searchBar.delegate = self
     }
@@ -423,9 +424,14 @@ class SettingsViewController: MotherViewController, UITextFieldDelegate {
 			}
 			if nameToSave == "" { return }
 			for players in self.allPlayersData {
+//				print("Here1!") // Passed
 				if players.value(forKey: "name") as? String == nameToSave {
 					print("Same Name: \(nameToSave)")
-					return }
+					return
+				} else {
+//					print("Not the Same: \(nameToSave)") // Passed!
+				}
+				
 			}
 			savePlayer(name: nameToSave)
 		}
@@ -440,8 +446,8 @@ class SettingsViewController: MotherViewController, UITextFieldDelegate {
 		func savePlayer(name: String) {
 			self.saveNewPlayer(name: name)
 			self.fetchAllPlayers()
-			self.view.setNeedsDisplay()
 			self.tableView.reloadData()
+			self.view.setNeedsDisplay()
 		}
 	}
 	@IBAction func setNumberOfSets(_ sender: UIButton) {

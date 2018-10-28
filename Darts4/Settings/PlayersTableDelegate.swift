@@ -16,6 +16,7 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerSearchCell") as? SearchTable else {
+			print("Failed to dequeue cell.")
 			return UITableViewCell()
 		}
 		cell.name.text = allPlayersData[indexPath.row].value(forKeyPath: "name") as? String  //allPlayers[indexPath.row]

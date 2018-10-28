@@ -172,6 +172,7 @@ class MotherViewController: UIViewController {
 		
 		do {
 			try context.save()
+			print("Saved")
 			allPlayers.append(name)
 		} catch let error as NSError {
 			print("Could not save. \(error), \(error.userInfo)")
