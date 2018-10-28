@@ -12,7 +12,7 @@
         <!--Darts-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ScoreViewController" customModule="Darts4" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Darts" id="BYZ-38-t0r" customClass="ScoreViewController" customModule="Darts4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -901,7 +901,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2281" y="-295"/>
+            <point key="canvasLocation" x="1642" y="-170"/>
         </scene>
         <!--Stats-->
         <scene sceneID="875-HJ-Fpf">

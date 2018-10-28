@@ -471,7 +471,7 @@ class ScoreViewController: MotherViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		title = "Darts"
+		self.parent?.title = "Darts"
 //		keyboardHeightSetter = keyboardHeightConstraint.constant
 		let insets = UIEdgeInsets(top: 0, left: 0, bottom: 300, right: 0)
 		self.tableView.contentInset = insets
@@ -498,14 +498,6 @@ class ScoreViewController: MotherViewController {
 		stateB = Array(repeating: 0, count: turnsNumber)
 		headerAToGo.text = String(startingToGo)
 		headerBToGo.text = String(startingToGo)
-		
-		
-		
-		// Set labels language:
-		
-		// Set Navigation Controller Title:
-		if setsNumber == 1 { title = "" }
-		else { title = "0 - 0" }
 		
 		
 		// Above Hearder
