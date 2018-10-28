@@ -69,6 +69,7 @@ class HeaderView: UIView {
 	override func draw(_ rect: CGRect) {
 		super.draw(rect)
 		
+		// Horizontal White Line on Header:
 		let context = UIGraphicsGetCurrentContext()
 		context?.setLineWidth(5.0)
 		context?.setStrokeColor(UIColor.white.cgColor)

@@ -15,6 +15,7 @@
 		DE1F29112183635A000F1F5E /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = DE1F29102183635A000F1F5E /* TODO */; };
 		DE1F29152184A669000F1F5E /* FooterLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F29142184A669000F1F5E /* FooterLabels.swift */; };
 		DE1F29172184B932000F1F5E /* SetsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F29162184B932000F1F5E /* SetsManager.swift */; };
+		DE1F291921859626000F1F5E /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F291821859626000F1F5E /* FooterView.swift */; };
 		DE201F9A216C6F6900DDD686 /* MotherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE201F99216C6F6900DDD686 /* MotherViewController.swift */; };
 		DE201F9E216CBE4500DDD686 /* ScoreboardTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE201F9D216CBE4500DDD686 /* ScoreboardTableView.swift */; };
 		DE201FA0216CCE5800DDD686 /* SettingsLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE201F9F216CCE5800DDD686 /* SettingsLabels.swift */; };
@@ -57,6 +58,7 @@
 		DE1F29102183635A000F1F5E /* TODO */ = {isa = PBXFileReference; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		DE1F29142184A669000F1F5E /* FooterLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterLabels.swift; sourceTree = "<group>"; };
 		DE1F29162184B932000F1F5E /* SetsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsManager.swift; sourceTree = "<group>"; };
+		DE1F291821859626000F1F5E /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		DE201F99216C6F6900DDD686 /* MotherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherViewController.swift; sourceTree = "<group>"; };
 		DE201F9D216CBE4500DDD686 /* ScoreboardTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardTableView.swift; sourceTree = "<group>"; };
 		DE201F9F216CCE5800DDD686 /* SettingsLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLabels.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			children = (
 				DEB13AA2216B9C6900107DFD /* BoardLabel.swift */,
 				DE1F29142184A669000F1F5E /* FooterLabels.swift */,
+				DE1F291821859626000F1F5E /* FooterView.swift */,
 			);
 			path = BoardLabel;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				DEE8C54821770824008C3F06 /* NavigationController.swift in Sources */,
 				DE35AA212183355B0092CF95 /* GrayLabel.swift in Sources */,
 				DEB13AAA216BB1B800107DFD /* SettingsViewController.swift in Sources */,
+				DE1F291921859626000F1F5E /* FooterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

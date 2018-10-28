@@ -142,7 +142,7 @@
                                                     <constraint firstAttribute="bottom" secondItem="fzX-Js-nsd" secondAttribute="bottom" id="oRv-Om-7Kj"/>
                                                 </constraints>
                                             </view>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="49" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xth-dj-BGe" customClass="ScoreboardTableView" customModule="Darts4" customModuleProvider="target">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xth-dj-BGe" customClass="ScoreboardTableView" customModule="Darts4" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="54" width="414" height="418"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <view key="tableHeaderView" contentMode="scaleToFill" id="QXb-cw-Klm">
@@ -161,7 +161,7 @@
                                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                     </variation>
                                                                     <variation key="heightClass=regular-widthClass=regular" hidden="NO">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                     </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="GVa-gF-wRL" customClass="ScoreLabel" customModule="Darts4" customModuleProvider="target">
@@ -251,127 +251,151 @@
                                                     </constraints>
                                                 </view>
                                                 <view key="tableFooterView" contentMode="scaleToFill" id="8pC-2b-gtw">
-                                                    <rect key="frame" x="0.0" y="117" width="414" height="44"/>
+                                                    <rect key="frame" x="0.0" y="112" width="414" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JWd-7F-rXx">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N35-Mk-E8P">
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6E-LX-Ct4" customClass="FooterLabels" customModule="Darts4" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
-                                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                    <variation key="heightClass=regular-widthClass=compact" hidden="YES">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    </variation>
-                                                                    <variation key="heightClass=regular-widthClass=regular" hidden="NO">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    </variation>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Bx-H6-otb" customClass="FooterLabels" customModule="Darts4" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="82.666666666666671" height="44"/>
-                                                                    <color key="backgroundColor" white="0.070000000000000007" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                    <variation key="heightClass=regular-widthClass=compact">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    </variation>
-                                                                    <variation key="heightClass=regular-widthClass=regular">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                                    </variation>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="N2a-ia-4co" customClass="FooterLabels" customModule="Darts4" customModuleProvider="target">
-                                                                    <rect key="frame" x="82.666666666666671" y="0.0" width="83.000000000000014" height="44"/>
-                                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                    <variation key="heightClass=regular-widthClass=compact">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    </variation>
-                                                                    <variation key="heightClass=regular-widthClass=regular">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                                    </variation>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="4bY-Wb-6jS" customClass="TurnFooterLabel" customModule="Darts4" customModuleProvider="target">
-                                                                    <rect key="frame" x="165.66666666666666" y="0.0" width="82.666666666666657" height="44"/>
-                                                                    <color key="backgroundColor" white="0.070000000000000007" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                    <color key="textColor" red="0.2784313725" green="0.70588235290000001" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                    <variation key="heightClass=regular-widthClass=compact">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                    </variation>
-                                                                    <variation key="heightClass=regular-widthClass=regular">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                                    </variation>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="cFu-Kz-xHJ" customClass="FooterLabels" customModule="Darts4" customModuleProvider="target">
-                                                                    <rect key="frame" x="248.33333333333337" y="0.0" width="83" height="44"/>
-                                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                    <variation key="heightClass=regular-widthClass=compact">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    </variation>
-                                                                    <variation key="heightClass=regular-widthClass=regular">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                                    </variation>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="drn-5d-ZD0" customClass="FooterLabels" customModule="Darts4" customModuleProvider="target">
-                                                                    <rect key="frame" x="331.33333333333331" y="0.0" width="82.666666666666686" height="44"/>
-                                                                    <color key="backgroundColor" white="0.070000000000000007" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                    <variation key="heightClass=regular-widthClass=compact">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    </variation>
-                                                                    <variation key="heightClass=regular-widthClass=regular">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                                    </variation>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9d4-qB-pXz" customClass="FooterLabels" customModule="Darts4" customModuleProvider="target">
-                                                                    <rect key="frame" x="414" y="0.0" width="0.0" height="44"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                    <variation key="heightClass=regular-widthClass=compact" hidden="YES">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    </variation>
-                                                                    <variation key="heightClass=regular-widthClass=regular" hidden="NO">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    </variation>
-                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JWd-7F-rXx">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="39"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6E-LX-Ct4" customClass="FooterLabels" customModule="Darts4" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="39"/>
+                                                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                            <variation key="heightClass=regular-widthClass=compact" hidden="YES">
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                            </variation>
+                                                                            <variation key="heightClass=regular-widthClass=regular" hidden="NO">
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                            </variation>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Bx-H6-otb" customClass="FooterLabels" customModule="Darts4" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="82.666666666666671" height="39"/>
+                                                                            <color key="backgroundColor" white="0.070000000000000007" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                            <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                            <variation key="heightClass=regular-widthClass=compact">
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                            </variation>
+                                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                                            </variation>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="N2a-ia-4co" customClass="FooterLabels" customModule="Darts4" customModuleProvider="target">
+                                                                            <rect key="frame" x="82.666666666666671" y="0.0" width="83.000000000000014" height="39"/>
+                                                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                            <variation key="heightClass=regular-widthClass=compact">
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                            </variation>
+                                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                                            </variation>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="4bY-Wb-6jS" customClass="TurnFooterLabel" customModule="Darts4" customModuleProvider="target">
+                                                                            <rect key="frame" x="165.66666666666666" y="0.0" width="82.666666666666657" height="39"/>
+                                                                            <color key="backgroundColor" white="0.070000000000000007" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                            <color key="textColor" red="0.2784313725" green="0.70588235290000001" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                            <variation key="heightClass=regular-widthClass=compact">
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                            </variation>
+                                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                                            </variation>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="cFu-Kz-xHJ" customClass="FooterLabels" customModule="Darts4" customModuleProvider="target">
+                                                                            <rect key="frame" x="248.33333333333337" y="0.0" width="83" height="39"/>
+                                                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                            <variation key="heightClass=regular-widthClass=compact">
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                            </variation>
+                                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                                            </variation>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="drn-5d-ZD0" customClass="FooterLabels" customModule="Darts4" customModuleProvider="target">
+                                                                            <rect key="frame" x="331.33333333333331" y="0.0" width="82.666666666666686" height="39"/>
+                                                                            <color key="backgroundColor" white="0.070000000000000007" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                            <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                            <variation key="heightClass=regular-widthClass=compact">
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                            </variation>
+                                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                                            </variation>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9d4-qB-pXz" customClass="FooterLabels" customModule="Darts4" customModuleProvider="target">
+                                                                            <rect key="frame" x="414" y="0.0" width="0.0" height="39"/>
+                                                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                            <variation key="heightClass=regular-widthClass=compact" hidden="YES">
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                            </variation>
+                                                                            <variation key="heightClass=regular-widthClass=regular" hidden="NO">
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                            </variation>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </stackView>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s5S-Xm-QDE">
+                                                                    <rect key="frame" x="0.0" y="39" width="414" height="5"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="5" id="h2L-kT-Y36"/>
+                                                                    </constraints>
+                                                                </view>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </stackView>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstItem="s5S-Xm-QDE" firstAttribute="top" secondItem="JWd-7F-rXx" secondAttribute="bottom" id="0oG-P4-kDA"/>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="49" id="0rA-hn-gr7"/>
+                                                                <constraint firstAttribute="bottom" secondItem="s5S-Xm-QDE" secondAttribute="bottom" id="9LK-oK-r4T"/>
+                                                                <constraint firstAttribute="trailing" secondItem="s5S-Xm-QDE" secondAttribute="trailing" id="AVJ-S0-Ro6"/>
+                                                                <constraint firstItem="JWd-7F-rXx" firstAttribute="leading" secondItem="N35-Mk-E8P" secondAttribute="leading" id="TE0-f1-2em"/>
+                                                                <constraint firstAttribute="trailing" secondItem="JWd-7F-rXx" secondAttribute="trailing" id="WBt-2J-LV9"/>
+                                                                <constraint firstItem="s5S-Xm-QDE" firstAttribute="leading" secondItem="N35-Mk-E8P" secondAttribute="leading" id="ejG-ix-8Nw"/>
+                                                                <constraint firstItem="JWd-7F-rXx" firstAttribute="top" secondItem="N35-Mk-E8P" secondAttribute="top" id="nYN-8V-6Qv"/>
+                                                            </constraints>
+                                                        </view>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="JWd-7F-rXx" secondAttribute="trailing" id="4Dg-MP-XZk"/>
-                                                        <constraint firstItem="JWd-7F-rXx" firstAttribute="leading" secondItem="8pC-2b-gtw" secondAttribute="leading" id="HJf-T4-D1m"/>
-                                                        <constraint firstAttribute="bottom" secondItem="JWd-7F-rXx" secondAttribute="bottom" id="Mt0-8D-oQ1"/>
-                                                        <constraint firstItem="JWd-7F-rXx" firstAttribute="top" secondItem="8pC-2b-gtw" secondAttribute="top" id="R5o-Uu-o0f"/>
+                                                        <constraint firstItem="N35-Mk-E8P" firstAttribute="top" secondItem="8pC-2b-gtw" secondAttribute="top" id="Bu5-7t-EgC"/>
+                                                        <constraint firstItem="N35-Mk-E8P" firstAttribute="leading" secondItem="8pC-2b-gtw" secondAttribute="leading" id="E1s-tL-T4K"/>
+                                                        <constraint firstAttribute="trailing" secondItem="N35-Mk-E8P" secondAttribute="trailing" id="LFY-vJ-Zxb"/>
+                                                        <constraint firstAttribute="bottom" secondItem="N35-Mk-E8P" secondAttribute="bottom" id="uLg-rW-OKt"/>
                                                     </constraints>
                                                 </view>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScoreCell" id="hnX-RE-88R" customClass="ScoresCell" customModule="Darts4" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="68" width="414" height="49"/>
+                                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScoreCell" id="hnX-RE-88R" customClass="ScoresCell" customModule="Darts4" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="68" width="414" height="44"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hnX-RE-88R" id="H7j-ju-3lB">
-                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="48.666666666666664"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2S3-dJ-7Me">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="49.666666666666664"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Michel" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6Y-Qt-TXK" customClass="BoardLabel" customModule="Darts4" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="49.666666666666664"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="43.666666666666664"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
@@ -383,7 +407,7 @@
                                                                             </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="k62-nS-VXV" customClass="ScoreLabel" customModule="Darts4" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="82.666666666666671" height="49.666666666666664"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="82.666666666666671" height="43.666666666666664"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                             <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -396,7 +420,7 @@
                                                                             </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EX3-XZ-56K" customClass="BoardLabel" customModule="Darts4" customModuleProvider="target">
-                                                                            <rect key="frame" x="82.666666666666671" y="0.0" width="83.000000000000014" height="49.666666666666664"/>
+                                                                            <rect key="frame" x="82.666666666666671" y="0.0" width="83.000000000000014" height="43.666666666666664"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                             <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                             <nil key="highlightedColor"/>
@@ -408,7 +432,7 @@
                                                                             </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="120" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Tvs-IB-dgR" customClass="turnLabel" customModule="Darts4" customModuleProvider="target">
-                                                                            <rect key="frame" x="165.66666666666666" y="0.0" width="82.666666666666657" height="49.666666666666664"/>
+                                                                            <rect key="frame" x="165.66666666666666" y="0.0" width="82.666666666666657" height="43.666666666666664"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                                             <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
@@ -420,7 +444,7 @@
                                                                             </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="fZo-SG-ewp" customClass="ScoreLabel" customModule="Darts4" customModuleProvider="target">
-                                                                            <rect key="frame" x="248.33333333333337" y="0.0" width="83" height="49.666666666666664"/>
+                                                                            <rect key="frame" x="248.33333333333337" y="0.0" width="83" height="43.666666666666664"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                             <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                             <nil key="highlightedColor"/>
@@ -432,7 +456,7 @@
                                                                             </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="SHb-8t-RM0" customClass="BoardLabel" customModule="Darts4" customModuleProvider="target">
-                                                                            <rect key="frame" x="331.33333333333331" y="0.0" width="82.666666666666686" height="49.666666666666664"/>
+                                                                            <rect key="frame" x="331.33333333333331" y="0.0" width="82.666666666666686" height="43.666666666666664"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                             <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                             <nil key="highlightedColor"/>
@@ -444,7 +468,7 @@
                                                                             </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Player" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBo-QP-ehs" customClass="BoardLabel" customModule="Darts4" customModuleProvider="target">
-                                                                            <rect key="frame" x="414" y="0.0" width="0.0" height="49.666666666666664"/>
+                                                                            <rect key="frame" x="414" y="0.0" width="0.0" height="43.666666666666664"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
@@ -790,7 +814,7 @@
                                         <rect key="frame" x="77" y="168" width="260" height="72"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="260" id="z0d-px-RgG"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="z0d-px-RgG"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <state key="normal" title="Next Leg">
@@ -901,7 +925,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1642" y="-170"/>
+            <point key="canvasLocation" x="1640.5797101449277" y="-170.38043478260872"/>
         </scene>
         <!--Stats-->
         <scene sceneID="875-HJ-Fpf">
