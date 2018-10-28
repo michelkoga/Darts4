@@ -19,25 +19,24 @@ extension ScoreViewController: UITableViewDataSource, UITableViewDelegate {
 		
 		let cell = tableView.dequeueReusableCell(withIdentifier: "ScoreCell") as! ScoresCell
 		// Make plaid:
-		cell.tag = indexPath.row
-		if cell.tag % 2 == 0 {
-			cell.scoreA.layer.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-			cell.setNumber.layer.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-			cell.toGoB.layer.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+		if indexPath.row % 2 == 0 {
+			cell.scoreA.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+			cell.setNumber.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+			cell.toGoB.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
 			
-			cell.playerA.layer.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
-			cell.toGoA.layer.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
-			cell.scoreB.layer.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
-			cell.playerB.layer.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
+			cell.playerA.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
+			cell.toGoA.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
+			cell.scoreB.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
+			cell.playerB.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
 		} else {
-			cell.scoreA.layer.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
-			cell.setNumber.layer.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
-			cell.toGoB.layer.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
+			cell.scoreA.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
+			cell.setNumber.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
+			cell.toGoB.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
 			
-			cell.playerA.layer.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-			cell.toGoA.layer.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-			cell.scoreB.layer.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-			cell.playerB.layer.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+			cell.playerA.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+			cell.toGoA.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+			cell.scoreB.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+			cell.playerB.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
 		}
 		// Set turn colors:
 		if indexPath.row % 2 == 0 {
@@ -46,23 +45,15 @@ extension ScoreViewController: UITableViewDataSource, UITableViewDelegate {
 			cell.setNumber.textColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
 		}
 		
-		// Colors in scoreLabel:
-		cell.scoreA.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
-		cell.scoreB.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
-		
-		// Highlight Next Player and score
-		cell.playerA.textColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
-		cell.playerB.textColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
-		
 		
 		if indexPath.row == row && !isGameOver {
 			switch teamTurn {
 			case 0:
-//				cell.scoreA.layer.borderColor = #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1)
+				cell.scoreA.backgroundColor = #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1)
 				
 				cell.playerA.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 			case 1:
-//				cell.scoreB.layer.borderColor = #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1)
+				cell.scoreB.backgroundColor = #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1)
 				
 				cell.playerB.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 			default:

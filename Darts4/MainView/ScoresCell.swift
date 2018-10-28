@@ -11,10 +11,10 @@ import UIKit
 class ScoresCell: UITableViewCell {
 	override func draw(_ rect: CGRect) {
 		super.draw(rect)
-		let selectedColorView = UIView()
-		selectedColorView.backgroundColor = UIColor.darkGray
-		self.selectedBackgroundView = selectedColorView
-		self.selectionStyle = .none
+//		let selectedColorView = UIView()
+//		selectedColorView.backgroundColor = UIColor.darkGray
+//		self.selectedBackgroundView = selectedColorView
+//		self.selectionStyle = .none
 		
 		
 		if self.setNumber.tag == 99 {
