@@ -98,9 +98,33 @@ class ScoreLabel: BoardLabel {
 	}
 	
 }
+class CrossedLabel: BoardLabel, Cross {
+	override func draw(_ rect: CGRect) {
+		super.draw(rect)
+		drawCross()
+	}
+	func drawCross() {
+		let cross = UIGraphicsGetCurrentContext()
+		cross?.setLineCap(.round)
+		cross?.setLineWidth(3.0)
+		cross?.setStrokeColor(#colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1))
+		cross?.move(to: CGPoint(x: 0, y: 0))
+		cross?.addLine(to: CGPoint(x: self.frame.width, y: self.frame.height))
+		cross?.move(to: CGPoint(x: self.frame.width, y: 0))
+		cross?.addLine(to: CGPoint(x: 0, y: self.frame.height))
+		cross?.strokePath()
+	}
+	
+	
+}
+
 class TurnNumber: BoardLabel {
 	
 	override func draw(_ rect: CGRect) {
 		super.draw(rect)
 	}
+}
+
+protocol Cross {
+	func drawCross()
 }

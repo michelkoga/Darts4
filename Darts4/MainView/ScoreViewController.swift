@@ -75,6 +75,9 @@ class ScoreViewController: MotherViewController {
 	
 	@IBOutlet weak var hideKeyboardButton: BigButton!
 	
+	@IBOutlet weak var footerFinishALabel: FooterLabels!
+	@IBOutlet weak var footerFinishBLabel: FooterLabels!
+	
 	@IBOutlet weak var footerALabel: UILabel!
 	@IBOutlet weak var footerBLabel: UILabel!
 	// MARK:
@@ -727,7 +730,9 @@ class ScoreViewController: MotherViewController {
 		print(" ")
 	}
 	func newLeg() {
+		resetFooter()
 		finishA = 0
+		finishB = 0
 		leg += 1
 		resetArrays()
 		row = 0
@@ -742,6 +747,8 @@ class ScoreViewController: MotherViewController {
 		inputHolder = ""
 	}
 	func resetGame() {
+		resetFooter()
+		finishA = 0
 		finishB = 0
 		resetArrays()
 		row = 0
@@ -758,6 +765,12 @@ class ScoreViewController: MotherViewController {
 		leg = 1
 		inputHolder = ""
 		rightNavigatorButton.title = "Settings"
+	}
+	func resetFooter() {
+		footerALabel.text = ""
+		footerBLabel.text = ""
+		footerFinishALabel.text = ""
+		footerFinishBLabel.text = ""
 	}
 	func resetArrays() {
 		scoresA = Array(repeating: nil, count: turnsNumber)

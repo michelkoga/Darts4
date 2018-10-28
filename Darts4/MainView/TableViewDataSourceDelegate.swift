@@ -49,11 +49,11 @@ extension ScoreViewController: UITableViewDataSource, UITableViewDelegate {
 		if indexPath.row == row && !isGameOver {
 			switch teamTurn {
 			case 0:
-				cell.scoreA.backgroundColor = #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1)
+				cell.scoreA.backgroundColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 1)
 				
 				cell.playerA.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 			case 1:
-				cell.scoreB.backgroundColor = #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1)
+				cell.scoreB.backgroundColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 1)
 				
 				cell.playerB.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 			default:

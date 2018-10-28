@@ -172,11 +172,20 @@ extension ScoreViewController {
 			if index < indexA { index += 1 }
 			else { index = 0 }
 		}
-		// Add One More Set(Center):
-		let centerSet: Set = Set(playerA: "", playerB: "", scoreA: "", scoreB: "", toGoA: "", toGoB: "", turnNumber: "C", isBurst: false, isLast: false)
-		tempSets.append(centerSet)
-		footerALabel.text = "\(row * 3 + finishA)"
-		footerBLabel.text = "\(row * 3 + finishB)"
+//		// Add One More Set(Center):
+//		let centerSet: Set = Set(playerA: "", playerB: "", scoreA: "", scoreB: "", toGoA: "", toGoB: "", turnNumber: "C", isBurst: false, isLast: false)
+//		tempSets.append(centerSet)
+		// Set Finish Number:
+		if finishA != 0 {
+			footerFinishALabel.text = "X\(finishA)"
+		} else if finishB != 0 {
+			footerFinishBLabel.text = "X\(finishB)"
+		}
+		// set Darts Number:
+		if finishA != 0 || finishB != 0 {
+			footerALabel.text = "\((row + 1) * 3 + finishA)d"
+			footerBLabel.text = "\((row + 1) * 3 + finishB)d"
+		}
 		
 		return tempSets
 	}
