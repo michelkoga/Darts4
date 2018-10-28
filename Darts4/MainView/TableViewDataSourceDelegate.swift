@@ -18,6 +18,20 @@ extension ScoreViewController: UITableViewDataSource, UITableViewDelegate {
 		let set = sets[indexPath.row]
 		
 		let cell = tableView.dequeueReusableCell(withIdentifier: "ScoreCell") as! ScoresCell
+		// Make plaid:
+		cell.tag = indexPath.row
+		if cell.tag % 2 == 0 {
+			//let colorA = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+			cell.scoreA.layer.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+			cell.setNumber.layer.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+//			cell.toGoB.layer.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+		} else {
+//			let color = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
+			cell.playerA.layer.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
+			cell.toGoA.layer.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
+			cell.scoreB.layer.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
+			cell.playerB.layer.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
+		}
 		// Set turn colors:
 		if indexPath.row % 2 == 0 {
 			cell.setNumber.textColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
@@ -37,18 +51,17 @@ extension ScoreViewController: UITableViewDataSource, UITableViewDelegate {
 		if indexPath.row == row && !isGameOver {
 			switch teamTurn {
 			case 0:
-				cell.scoreA.layer.borderColor = #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1)
+//				cell.scoreA.layer.borderColor = #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1)
 				
 				cell.playerA.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 			case 1:
-				cell.scoreB.layer.borderColor = #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1)
+//				cell.scoreB.layer.borderColor = #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1)
 				
 				cell.playerB.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 			default:
 				break
 			}
 		}
-		
 		if indexPath.row == sets.count {
 			if sets.last?.toGoA != "" {
 			}

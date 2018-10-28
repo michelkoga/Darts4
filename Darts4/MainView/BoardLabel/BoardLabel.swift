@@ -43,8 +43,8 @@ class ScoreLabel: BoardLabel {
 		//			let text = String((self.text?.dropLast())!)
 		//			self.text = text
 		//		}
-		self.layer.cornerRadius = 10
-		self.layer.borderWidth = 3.0
+//		self.layer.cornerRadius = 10
+//		self.layer.borderWidth = 3.0
 		var minBestScore = 50
 		if UserDefaults.standard.contains(key: "minNiceValue") {
 			minBestScore = UserDefaults.standard.integer(forKey: "minNiceValue")

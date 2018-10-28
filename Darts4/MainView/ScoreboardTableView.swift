@@ -80,24 +80,24 @@ class HeaderView: UIView {
 		
 		// Subtle Lines:
 		
-		if self.layer.bounds.width > 760.0 {
-			let scoreARightUP = CGPoint(x: ((self.bounds.midX/2) + 40), y: 10)
-			let scoreARightDown = CGPoint(x: ((self.bounds.midX/2) + 40), y: 57)
-			
-			let scoreBLeftUp = CGPoint(x: (((self.bounds.midX/2) * 3) - 30), y: 10)
-			let scoreBLeftDown = CGPoint(x: (((self.bounds.midX/2) * 3) - 30), y: 57)
-			
-			let subtleLines = UIGraphicsGetCurrentContext()
-			subtleLines?.setLineWidth(4)
-			subtleLines?.setStrokeColor(#colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1))
-			
-			subtleLines?.move(to: scoreARightUP)
-			subtleLines?.addLine(to: scoreARightDown)
-			subtleLines?.move(to: scoreBLeftUp)
-			subtleLines?.addLine(to: scoreBLeftDown)
-			
-			subtleLines?.strokePath()
-		}
+//		if self.layer.bounds.width > 760.0 {
+//			let scoreARightUP = CGPoint(x: ((self.bounds.midX/2) + 40), y: 10)
+//			let scoreARightDown = CGPoint(x: ((self.bounds.midX/2) + 40), y: 57)
+//			
+//			let scoreBLeftUp = CGPoint(x: (((self.bounds.midX/2) * 3) - 30), y: 10)
+//			let scoreBLeftDown = CGPoint(x: (((self.bounds.midX/2) * 3) - 30), y: 57)
+//			
+//			let subtleLines = UIGraphicsGetCurrentContext()
+//			subtleLines?.setLineWidth(4)
+//			subtleLines?.setStrokeColor(#colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1))
+//			
+//			subtleLines?.move(to: scoreARightUP)
+//			subtleLines?.addLine(to: scoreARightDown)
+//			subtleLines?.move(to: scoreBLeftUp)
+//			subtleLines?.addLine(to: scoreBLeftDown)
+//			
+//			subtleLines?.strokePath()
+//		}
 		
 	}
 }

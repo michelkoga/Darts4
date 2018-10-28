@@ -38,6 +38,7 @@ class ScoreViewController: MotherViewController {
 	@IBOutlet weak var labelAName: BoardLabel! // Don't need
 	@IBOutlet weak var labelAScore: BoardLabel! // Check
 	@IBOutlet weak var labelBScore: BoardLabel! // Check
+	@IBOutlet weak var headerCenterLabel: UILabel!
 	@IBOutlet weak var labelAToGo: UILabel! // Check
 	@IBOutlet weak var labelBToGo: UILabel! // Check
 	@IBOutlet weak var labelBName: BoardLabel! // Don't need
@@ -361,7 +362,7 @@ class ScoreViewController: MotherViewController {
 			hideHiddenView()
 			showKeyboard()
 		}
-		title = "\(legsA) - \(legsB)"
+		headerCenterLabel.text = "\(legsA) - \(legsB)"
 		if legsA >= legsLimit {
 			gameWinner = "A"
 		} else if legsB >= legsLimit {
@@ -470,11 +471,10 @@ class ScoreViewController: MotherViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
 //		keyboardHeightSetter = keyboardHeightConstraint.constant
 		let insets = UIEdgeInsets(top: 0, left: 0, bottom: 300, right: 0)
 		self.tableView.contentInset = insets
-		self.view.setGradientBackground(colorOne: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), colorTwo: #colorLiteral(red: 0.370555222, green: 0.3705646992, blue: 0.3705595732, alpha: 1))
+//		self.view.setGradientBackground(colorOne: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), colorTwo: #colorLiteral(red: 0.370555222, green: 0.3705646992, blue: 0.3705595732, alpha: 1))
 		self.tableView.separatorStyle = .none
 		//		self.tableView.backgroundColor = UIColor.black
 		tableView.delegate = self
