@@ -471,6 +471,7 @@ class ScoreViewController: MotherViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		title = "Darts"
 //		keyboardHeightSetter = keyboardHeightConstraint.constant
 		let insets = UIEdgeInsets(top: 0, left: 0, bottom: 300, right: 0)
 		self.tableView.contentInset = insets
@@ -498,9 +499,7 @@ class ScoreViewController: MotherViewController {
 		headerAToGo.text = String(startingToGo)
 		headerBToGo.text = String(startingToGo)
 		
-		sets = updateTableView()
 		
-		tableView.reloadData()
 		
 		// Set labels language:
 		
@@ -530,7 +529,9 @@ class ScoreViewController: MotherViewController {
 		toGoesA[0] = Int(headerAToGo.text!) ?? 251
 		toGoesB[0] = Int(headerBToGo.text!) ?? 251
 		
-		
+		sets = updateTableView()
+		tableView.reloadData()
+		self.view.setNeedsDisplay()
 		// Reset Game:
 		resetGame()
 		

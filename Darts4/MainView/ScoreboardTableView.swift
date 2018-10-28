@@ -72,9 +72,9 @@ class HeaderView: UIView {
 		let context = UIGraphicsGetCurrentContext()
 		context?.setLineWidth(5.0)
 		context?.setStrokeColor(UIColor.white.cgColor)
-		context?.move(to: CGPoint(x:20, y: 70))
+		context?.move(to: CGPoint(x:0, y: 47))
 		
-		context?.addLine(to: CGPoint(x: self.bounds.width - 20, y: 70))
+		context?.addLine(to: CGPoint(x: self.bounds.width, y: 47))
 		
 		context?.strokePath()
 		
@@ -83,19 +83,19 @@ class HeaderView: UIView {
 //		if self.layer.bounds.width > 760.0 {
 //			let scoreARightUP = CGPoint(x: ((self.bounds.midX/2) + 40), y: 10)
 //			let scoreARightDown = CGPoint(x: ((self.bounds.midX/2) + 40), y: 57)
-//			
+//
 //			let scoreBLeftUp = CGPoint(x: (((self.bounds.midX/2) * 3) - 30), y: 10)
 //			let scoreBLeftDown = CGPoint(x: (((self.bounds.midX/2) * 3) - 30), y: 57)
-//			
+//
 //			let subtleLines = UIGraphicsGetCurrentContext()
 //			subtleLines?.setLineWidth(4)
 //			subtleLines?.setStrokeColor(#colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1))
-//			
+//
 //			subtleLines?.move(to: scoreARightUP)
 //			subtleLines?.addLine(to: scoreARightDown)
 //			subtleLines?.move(to: scoreBLeftUp)
 //			subtleLines?.addLine(to: scoreBLeftDown)
-//			
+//
 //			subtleLines?.strokePath()
 //		}
 		

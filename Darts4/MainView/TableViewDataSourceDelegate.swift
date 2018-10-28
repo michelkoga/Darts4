@@ -21,16 +21,23 @@ extension ScoreViewController: UITableViewDataSource, UITableViewDelegate {
 		// Make plaid:
 		cell.tag = indexPath.row
 		if cell.tag % 2 == 0 {
-			//let colorA = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
 			cell.scoreA.layer.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
 			cell.setNumber.layer.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-//			cell.toGoB.layer.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-		} else {
-//			let color = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
+			cell.toGoB.layer.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+			
 			cell.playerA.layer.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
 			cell.toGoA.layer.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
 			cell.scoreB.layer.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
 			cell.playerB.layer.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
+		} else {
+			cell.scoreA.layer.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
+			cell.setNumber.layer.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
+			cell.toGoB.layer.backgroundColor = #colorLiteral(red: 0.08857408911, green: 0.08857408911, blue: 0.08857408911, alpha: 1)
+			
+			cell.playerA.layer.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+			cell.toGoA.layer.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+			cell.scoreB.layer.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+			cell.playerB.layer.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
 		}
 		// Set turn colors:
 		if indexPath.row % 2 == 0 {
