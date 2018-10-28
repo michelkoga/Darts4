@@ -11,6 +11,12 @@ import CoreData
 
 class ScoreViewController: MotherViewController {
 	// MARK: OUTLETS
+	// Navigator:
+	@IBOutlet weak var goToStatsButton: UIBarButtonItem!
+	@IBOutlet weak var goToSettingsButton: UIBarButtonItem!
+	
+	
+	
 	// Constraints:
 	@IBOutlet weak var tableViewBottomConstraints: NSLayoutConstraint!
 	@IBOutlet weak var keyboardTopConstraint: NSLayoutConstraint!
@@ -474,7 +480,7 @@ class ScoreViewController: MotherViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.parent?.title = "Darts"
+		self.parent?.title = Language.darts
 //		keyboardHeightSetter = keyboardHeightConstraint.constant
 		let insets = UIEdgeInsets(top: 0, left: 0, bottom: 300, right: 0)
 		self.tableView.contentInset = insets

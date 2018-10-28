@@ -301,15 +301,15 @@ class SettingsViewController: MotherViewController, UITextFieldDelegate {
 	func setLanguage() {
 		let setLanguageView = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
 		setLanguageView.addAction(UIAlertAction(title: "English", style: .default, handler: { (action: UIAlertAction!) in
-			Language.labelsLanguage = "English"
+			Language.setLanguageDefaults(with: "english")
 			self.setButtonsLabels()
 		}))
 		setLanguageView.addAction(UIAlertAction(title: "Japanese", style: .default, handler: { (action: UIAlertAction!) in
-			Language.labelsLanguage = "Japanese"
+			Language.setLanguageDefaults(with: "japanese")
 			self.setButtonsLabels()
 		}))
 		setLanguageView.addAction(UIAlertAction(title: "Portuguese", style: .default, handler: { (action: UIAlertAction!) in
-			Language.labelsLanguage = "Portuguese"
+			Language.setLanguageDefaults(with: "portuguese")
 			self.setButtonsLabels()
 		}))
 		setLanguageView.popoverPresentationController?.sourceView = self.view

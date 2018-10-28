@@ -10,20 +10,58 @@ import Foundation
 
 class Language {
 	fileprivate static let defaults = UserDefaults.standard
+	fileprivate static var defaultLanguage = "english"
+	
+	
+	static func getLanguageDefaults() {
+		defaultLanguage = defaults.string(forKey: "defaultLanguage") ?? "english"
+		translateWords(with: defaultLanguage)
+	}
+	static func setLanguageDefaults(with lang: String) {
+		defaults.setValue(lang, forKey: "defaultLanguage")
+		translateWords(with: lang)
+		
+	}
 	// Main View:
-	fileprivate static var player = "Player"
-	fileprivate static var team = "Team"
+	static var player = "Player"
+	static var team = "Team"
 	
 	// Settings View:
-	fileprivate static var language = "Language"
-	fileprivate static var reset = "Reset"
-	fileprivate static var turns = " Turns"
-	fileprivate static var done = " Done"
-	fileprivate static var starting = "Starting"
-	fileprivate static var points = " Points"
-	fileprivate static var players = " Players"
-	fileprivate static var score = "Score"
-	fileprivate static var cancel = "Cancel"
+	static var darts = "Darts"
+	static var language = "Language"
+	static var reset = "Reset"
+	static var turns = " Turns"
+	static var done = " Done"
+	static var starting = "Starting"
+	static var points = " Points"
+	static var players = " Players"
+	static var score = "Score"
+	static var cancel = "Cancel"
+	
+	static var spacePlayers = " Players"
+	static var spaceTurns = " Turns"
+	static var startingWith = "Starting with "
+	static var spacePoints = " Points"
+	static var toGo =  "To Go"
+	static var oneDart = "One Dart"
+	static var twoDarts = "Two Darts"
+	static var threeDarts = "Three Darts"
+	static var burst = "Burst"
+	static var finish = "Finish"
+	static var average = "Average"
+	static var newGame = "New Game"
+	static var abort = "Abort"
+	static var name = "Name"
+	static var newPlayer = "New Player"
+	static var game = "Game"
+	static var games = "Games"
+	static var leg = "Leg"
+	static var legs = "Legs"
+	static var stats = "Stats"
+	static var scoreboard = "Scoreboard"
+	static var show = "Show"
+	static var hide = "Hide"
+	static var space = " "
 	
 	// Keyboard View:
 	fileprivate static var settings = "Settings"
@@ -31,75 +69,168 @@ class Language {
 	
 	fileprivate static var labels = [player, team]
 	
-	fileprivate static func setLanguageDefaults(lang: String) {
+	
+	fileprivate static func translateWords(with lang: String) {
 		switch lang {
-		case "English":
+		case "english":
+			darts = "Darts"
 			score = "Score"
 			player = "Team "
+			players = "Players"
+			spacePlayers = " Players"
 			team = "Team"
 			language = "Language"
 			reset = "Reset"
-			turns = " Turns"
+			turns = "Turns"
+			spaceTurns = " Turns"
 			done = "Done"
 			starting = "Starting: "
+			startingWith = "Starting with "
 			points = " Points"
-			players = " Players"
+			spacePoints = " Points"
 			cancel = "Cancel"
-		// Keyboard View:
 			settings = "Settings"
-			//reset = same
-		case "Japanese":
+			toGo = "To Go"
+			oneDart = "One Dart"
+			twoDarts = "Two Darts"
+			threeDarts = "Three Darts"
+			burst = "Burst"
+			newGame = "New Game"
+			abort = "Abort"
+			name = "Name"
+			burst = "Burst"
+			finish = "Finish"
+			average = "Average"
+			newPlayer = "New Player"
+			game = "Game"
+			games = "Games"
+			leg = "Leg"
+			legs = "Legs"
+			stats = "Stats"
+			scoreboard = "Scoreboard"
+			show = "Show"
+			hide = "Hide"
+			space = " "
+		case  "portuguese":
+			darts = "Dardos"
+			score = "Pontos"
+			player = "Time"
+			players = "Jogadores"
+			spacePlayers =  " Jogadores"
+			team = "Time"
+			language = "Idioma"
+			reset = "Reiniciar"
+			turns =  "回"
+			spaceTurns =  "回"
+			done = "終了"
+			starting = "Início: "
+			startingWith = "Iniciar com "
+			points = " Pontos"
+			spacePoints = " Pontos"
+			cancel = "Cancelar"
+			settings = "Configurações"
+			toGo = "Faltam"
+			oneDart = "Um Dardo"
+			twoDarts = "Dois Dardos"
+			threeDarts = "Três Dardos"
+			burst = "Burst"
+			newGame = "Novo Jogo"
+			abort = "Abortar"
+			name = "Nome"
+			burst = "Estourar"
+			finish = "Finalizar"
+			average = "Média"
+			newPlayer = "Novo Jogador"
+			game = "Jogo"
+			games = "Jogos"
+			leg = "Rodada"
+			legs = "Rodadas"
+			stats = "Estatísticas"
+			scoreboard = "Marcador"
+			show = "Mostrar"
+			hide = "Esconder"
+			space = " "
+		case  "japanese":
+			darts = "ダーツ"
 			score = "点数"
-			player = "チーム　"
+			player =  "チーム"
+			players =  "選手"
+			spacePlayers = "名"
 			team = "チーム"
 			language = "言語"
-			reset = "リセット"
-			turns = "回"
-			done = "完了"
-			starting = "スタート："
-			points = "点から"
-			players = "名"
-			cancel = "キャンセル"
-			// Keyboard View:
-			settings = "設定"
-			// resetK = same
-		case "Portuguese":
-			score = "Pontos"
-			player = "Team "
-			team = "Time"
-			language = "Língua"
-			reset = "Reset"
-			turns = " Rondas"
+			reset = "再開"
+			turns = "Rondas"
+			spaceTurns = " Rondas"
 			done = "Concluir"
-			starting = "Início: "
-			points = " Pontos"
-			players = " Jogadores"
+			starting = "スタート："
+			startingWith = ""
+			points = "点から"
+			spacePoints = "点から"
+			cancel = "キャンセル"
+			settings = "設定"
+			toGo = "あと"
+			oneDart =  "一本"
+			twoDarts = "二本"
+			threeDarts = "三本"
+			burst = "バースト"
+			newGame = "新ゲーム"
+			abort = "中止"
+			name = "名前"
+			burst = "バースト"
+			finish = "フィニッシュ"
+			average = "平均"
+			newPlayer = "新プレーヤー"
+			game = "ゲーム"
+			games = "ゲーム"
+			leg = "レッグ"
+			legs = "レッグ"
+			stats = "統計"
+			scoreboard = "スコアボード"
+			show = "表示する"
+			hide = "隠す"
+			space = ""
+		case "spanish":
+			darts = "Dardos"
+			score = "Puentos"
+			player = "Time"
+			players = "Jugadores"
+			spacePlayers = " Jugadores"
+			team = "Time"
+			language = "Idioma"
+			reset = "Reiniciar"
+			turns =  "Vueltas"
+			spaceTurns =  " Vueltas"
+			done = "Hecho"
+			starting = "Principio: "
+			startingWith = "Comenzar con "
+			points = " Puntos"
+			spacePoints = " Puntos"
 			cancel = "Cancelar"
-			// Keyboard View:
-			settings = "Configurações"
-			//resetK = "Reset" Same
+			settings = "Ajustes"
+			toGo = "Faltan"
+			oneDart = "Un Dardo"
+			twoDarts = "Dos Dardos"
+			threeDarts = "Tres Dardos"
+			burst = "Burst"
+			newGame = "Nuevo Juego"
+			abort = "Abortar"
+			name = "Nombre"
+			burst = "Ráfaga"
+			finish = "Final"
+			average = "Promedio"
+			newPlayer = "Nuevo Jugador"
+			game = "Juego"
+			games = "Juegos"
+			leg = "Ronda"
+			legs = "Rondas"
+			stats = "Estadísticas"
+			scoreboard = "Marcador"
+			show = "Mostrar"
+			hide = "Ocultar"
+			space = " "
+			
 		default:
 			break
-		}
-		defaults.set(player, forKey: "playerLabel")
-		defaults.set(team, forKey: "teamLabel")
-		defaults.set(language, forKey: "languageLabel")
-		defaults.set(reset, forKey: "resetLabel")
-		defaults.set(turns, forKey: "turnsLabel")
-		defaults.set(done, forKey: "doneLabel")
-		defaults.set(starting, forKey: "startingLabel")
-		defaults.set(points, forKey: "pointsLabel")
-		defaults.set(players, forKey: "playersLabel")
-		defaults.set(settings, forKey: "settingsLabel")
-		defaults.set(cancel, forKey: "cancelLabel")
-		
-	}
-	
-	
-	// Languages:
-	static var labelsLanguage: String = "English" {
-		didSet {
-			Language.setLanguageDefaults(lang: labelsLanguage)
 		}
 	}
 }
