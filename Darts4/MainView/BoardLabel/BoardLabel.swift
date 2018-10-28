@@ -86,7 +86,7 @@ class ScoreLabel: BoardLabel {
 		context?.setLineWidth(3.0)
 		context?.setStrokeColor(#colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1))    // make circle rect 5 px from border
 		var circleRect = CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height)
-		circleRect = circleRect.insetBy(dx: 5, dy: 5)
+		circleRect = circleRect.insetBy(dx: 2, dy: 2)
 		
 		// draw circle
 		context?.strokeEllipse(in: circleRect)
