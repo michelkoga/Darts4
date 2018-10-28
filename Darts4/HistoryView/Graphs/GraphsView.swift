@@ -199,58 +199,6 @@ class GraphsView: MotherGraphsView {
 			rectLine?.addLine(to: rectPoint1)
 			
 			rectLine?.strokePath()
-//			// Set 50 points Line:
-//			let point50Y = ((50 - CGFloat(smallestAverage)) * yUnit) + 10
-//			let inverted50Y = maxY - point50Y
-//			let start50Point = CGPoint(x: minX, y: inverted50Y)
-//			let end50Point = CGPoint(x: maxX, y: inverted50Y)
-//
-//			let line50 = UIGraphicsGetCurrentContext()
-//			line50?.setLineWidth(2)
-//			line50?.setStrokeColor(#colorLiteral(red: 0.8446564078, green: 0.5145705342, blue: 1, alpha: 1))
-//			line50?.move(to: start50Point)
-//			line50?.addLine(to: end50Point)
-//			line50?.strokePath()
-//
-//			// Set 100 points Line:
-//			let point100Y = ((100 - CGFloat(smallestAverage)) * yUnit) + 10
-//			let inverted100Y = maxY - point100Y
-//			let start100Point = CGPoint(x: minX, y: inverted100Y)
-//			let end100Point = CGPoint(x: maxX, y: inverted100Y)
-//
-//			let line100 = UIGraphicsGetCurrentContext()
-//			line100?.setLineWidth(2)
-//			line100?.setStrokeColor(#colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1))
-//			line100?.move(to: start100Point)
-//			line100?.addLine(to: end100Point)
-//			line100?.strokePath()
-//
-//			// Set 120 points Line:
-//			let point120Y = ((120 - CGFloat(smallestAverage)) * yUnit) + 10
-//			let inverted120Y = maxY - point120Y
-//			let start120Point = CGPoint(x: minX, y: inverted120Y)
-//			let end120Point = CGPoint(x: maxX, y: inverted120Y)
-//
-//			let line120 = UIGraphicsGetCurrentContext()
-//			line120?.setLineWidth(2)
-//			line120?.setStrokeColor(#colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1))
-//			line120?.move(to: start120Point)
-//			line120?.addLine(to: end120Point)
-//			line120?.strokePath()
-//
-//			// Set 140 points Line:
-//			let point140Y = ((140 - CGFloat(smallestAverage)) * yUnit) + 10
-//			let inverted140Y = maxY - point140Y
-//			let start140Point = CGPoint(x: minX, y: inverted140Y)
-//			let end140Point = CGPoint(x: maxX, y: inverted120Y)
-//
-//			let line140 = UIGraphicsGetCurrentContext()
-//			line140?.setLineWidth(2)
-//			line140?.setStrokeColor(#colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1))
-//			line140?.move(to: start140Point)
-//			line140?.addLine(to: end140Point)
-//			line140?.strokePath()
-//
 			
 		}
 		

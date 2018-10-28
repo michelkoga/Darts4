@@ -13,7 +13,7 @@ class ScoreViewController: MotherViewController {
 	// MARK: OUTLETS
 	// Navigator:
 	@IBOutlet weak var goToStatsButton: UIBarButtonItem!
-	@IBOutlet weak var goToSettingsButton: UIBarButtonItem!
+	@IBOutlet weak var rightNavigatorButton: UIBarButtonItem!
 	
 	
 	
@@ -37,7 +37,6 @@ class ScoreViewController: MotherViewController {
 	@IBOutlet weak var nextGameButton: BiggestButton!
 	@IBOutlet weak var showKeyboardView: UIView!
 	
-	@IBOutlet weak var rightNavigatorButton: UIBarButtonItem!
 	
 	
 	// Above Header
@@ -75,6 +74,7 @@ class ScoreViewController: MotherViewController {
 	@IBOutlet weak var key9: NumberButton!
 	@IBOutlet weak var key0: NumberButton!
 	
+	@IBOutlet weak var oneStepBackButton: notNumberButton!
 	// Burst and Finish:
 	@IBOutlet weak var burstButton: BigButton!
 	@IBOutlet weak var finishButton: BigButton!
@@ -177,7 +177,7 @@ class ScoreViewController: MotherViewController {
 	var gameStarted = false {
 		didSet {
 			if gameStarted {
-				rightNavigatorButton.title = "Abort"
+				rightNavigatorButton.title = Language.abort
 				//				tableViewFooter.isHidden = true
 			}
 			
@@ -193,7 +193,7 @@ class ScoreViewController: MotherViewController {
 //				winnerLabelBottom.constant = 180
 				self.view.layoutIfNeeded()
 				animateWinLabel()
-				rightNavigatorButton.title = "Settings"
+				rightNavigatorButton.title = Language.settings
 				nextGameButton.setTitle("New Game", for: .normal)
 				
 				updatePlayers()
@@ -466,10 +466,12 @@ class ScoreViewController: MotherViewController {
 	// MARK: OVERRIDES
 	// MARK:
 	override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+		let settings = Language.settings
+		let abort = Language.abort
 		switch rightNavigatorButton.title {
-		case "Settings":
+		case settings:
 			return true
-		case "Abort":
+		case abort:
 			askToResetGame()
 			return false
 		default:
@@ -480,22 +482,23 @@ class ScoreViewController: MotherViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.parent?.title = Language.darts
-//		keyboardHeightSetter = keyboardHeightConstraint.constant
+		Language.getLanguageDefaults()
 		let insets = UIEdgeInsets(top: 0, left: 0, bottom: 300, right: 0)
 		self.tableView.contentInset = insets
-//		self.view.setGradientBackground(colorOne: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), colorTwo: #colorLiteral(red: 0.370555222, green: 0.3705646992, blue: 0.3705595732, alpha: 1))
 		self.tableView.separatorStyle = .none
-		//		self.tableView.backgroundColor = UIColor.black
 		tableView.delegate = self
 		tableView.dataSource = self
 		
 		createTestData()
-//		self.fetchAllPlayers()
 		
 	}
 	override func viewWillAppear(_ animated: Bool) {
 		resetArrays()
+		// Navigator View:
+		self.title = Language.darts
+		self.goToStatsButton.title = Language.stats
+		self.rightNavigatorButton.title = Language.settings
+		
 		
 		scoresA = Array(repeating: nil, count: turnsNumber)
 		scoresB = Array(repeating: nil, count: turnsNumber)
@@ -509,27 +512,27 @@ class ScoreViewController: MotherViewController {
 		headerBToGo.text = String(startingToGo)
 		
 		
-		// Above Hearder
-		labelAScore.text = defaults.string(forKey: "scoreLabel") ?? "Score"
-		labelBScore.text = defaults.string(forKey: "scoreLabel") ?? "Score"
-		labelAToGo.text = defaults.string(forKey: "toGoLabel") ?? "To Go"
-		labelBToGo.text = defaults.string(forKey: "toGoLabel") ?? "To Go"
+		// Above Hearder Labels:
+		labelAScore.text = Language.score
+		labelBScore.text = Language.score
+		labelAToGo.text = Language.toGo
+		labelBToGo.text = Language.toGo
 		if self.view.bounds.height > 700 {
 			keyboardHeightSetter = 250
 		}
 		
-		// Header
-		headerAName.text = defaults.string(forKey: "nameLabel") ?? "Name "
-		headerBName.text = defaults.string(forKey: "nameLabel") ?? "Name "
-		
-		
-		
-		//		let reset = UserDefaults.standard.string(forKey: "resetLabel") ?? "Reset"
-		
-		
+		// Header Labels:
+		headerAName.text = Language.name
+		headerBName.text = Language.name
 		toGoesA[0] = Int(headerAToGo.text!) ?? 251
 		toGoesB[0] = Int(headerBToGo.text!) ?? 251
 		
+		// Keyboard Labels:
+		oneStepBackButton.setTitle(Language.back, for: [.normal,.disabled,.focused,.highlighted,.selected])
+		
+		nextGameButton.setTitle(Language.nextLeg, for: [.normal,.disabled,.focused,.highlighted,.selected])
+		
+		// UpdateTableView:
 		sets = updateTableView()
 		tableView.reloadData()
 		self.view.setNeedsDisplay()
@@ -770,7 +773,7 @@ class ScoreViewController: MotherViewController {
 //		winnerLabel.isHidden = true
 		leg = 1
 		inputHolder = ""
-		rightNavigatorButton.title = "Settings"
+		rightNavigatorButton.title = Language.settings
 	}
 	func resetFooter() {
 		footerALabel.text = ""

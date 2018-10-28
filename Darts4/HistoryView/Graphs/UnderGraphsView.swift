@@ -29,7 +29,6 @@ class UnderGraphsView: MotherGraphsView {
 	// An empty implementation adversely affects performance during animation.
 	override func draw(_ rect: CGRect) {
 		super.draw(rect)
-		print("Here is 1")
 		if self.layer.bounds.width > 700.0 {
 			let minX: CGFloat = 0.0
 			//			let midX = self.layer.bounds.midX
@@ -62,14 +61,14 @@ class UnderGraphsView: MotherGraphsView {
 			// Labels:
 			fetchAllPlayers()
 			if allPlayersData == [] { print("allPlayersData empty?"); return }
-			print("Player Index is \(playerIndex)")
+//			print("Player Index is \(playerIndex)")
 			let playerData = allPlayersData[playerIndex]
 			
 			guard let matchesAverages: Float = (playerData.value(forKey: "average") as? Float) else { return }
-			print("matchesAverages: \(matchesAverages)")
+//			print("matchesAverages: \(matchesAverages)")
 			for case let label as UILabel in self.subviews {
 				if label.tag == 1 {
-					label.text = String("Average: \(matchesAverages)")
+					label.text = String("\(Language.average): \(matchesAverages)")
 					print(matchesAverages)
 				}
 			}

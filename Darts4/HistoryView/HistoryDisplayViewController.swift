@@ -10,6 +10,14 @@ import UIKit
 import CoreData
 
 class HistoryDisplayViewController: MotherViewController {
+	
+	// Header Labels
+	@IBOutlet weak var nameHeaderLabel: GrayLabel!
+	@IBOutlet weak var gamesHeaderLabel: GrayLabel!
+	@IBOutlet weak var winsHeaderLabel: GrayLabel!
+	@IBOutlet weak var averageHeaderLabel: GrayLabel!
+	
+	
 	//	var allPlayersData: [NSManagedObject] = []
 	let players = ["Michel", "Willie", "Mvario"]
 	let games = ["Today","Last Week", "Last Month"]
@@ -36,13 +44,19 @@ class HistoryDisplayViewController: MotherViewController {
 		default:
 			break
 		}
-		
 	}
 	override func viewWillAppear(_ animated: Bool) {
+		setLabelsTitles()
 		tableView.reloadData()
 	}
-	func getAverages() {
-		
+	func setLabelsTitles() {
+		// Navigator:
+		title = Language.stats
+		// Header:
+		nameHeaderLabel.text = Language.name
+		gamesHeaderLabel.text = Language.numberOfGames
+		winsHeaderLabel.text = Language.numberOfWins
+		averageHeaderLabel.text = Language.average
 	}
 	func showPlayerStats(playerName: String) {
 		print("I can pass information here.")
@@ -106,7 +120,7 @@ extension HistoryDisplayViewController: UITabBarDelegate, UITableViewDataSource 
 		let average = allPlayersData[indexPath.row].value(forKey: "average") as? Float
 		let nameText = "\(name!)"
 		let winText = "\(wins!)"
-		let averageText = " Average: \(average!.rounded(toPlaces: 2))"
+		let averageText = "\(average!.rounded(toPlaces: 2))"
 		cell.nameLabel.text = nameText
 		cell.gamesLabel.text = "\(games!)"
 		cell.winLabel.text = winText

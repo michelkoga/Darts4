@@ -11,7 +11,10 @@ import UIKit
 class SettingsViewController: MotherViewController, UITextFieldDelegate {
 	var selectedButton = 1
 	// **************************************
-
+	// Navigator:
+	@IBOutlet weak var doneNavigatorButton: UIBarButtonItem!
+	@IBOutlet weak var addNameNavigatorButton: UIBarButtonItem!
+	
 //	@IBOutlet weak var startScore: UITextField!
 //	@IBOutlet weak var numberOfTurns: UITextField!
 	
@@ -61,22 +64,25 @@ class SettingsViewController: MotherViewController, UITextFieldDelegate {
 	
 	// MARK: FUNCTIONS
 	func setButtonsLabels() {
-		// Get UserDefaultsLabels:
-		let starting = defaults.string(forKey: "startingLabel") ?? "Starting: "
-		let points = defaults.string(forKey: "pointsLabel") ?? " Points"
-		let turnsLabel = defaults.string(forKey: "turnsLabel") ?? " Turns"
-		let players = defaults.string(forKey: "playersLabel") ?? " Players"
+		// Set Navigator Labels:
+		title = Language.settings
 		
-		let lang = defaults.string(forKey: "languageLabel") ?? "Language"
-		let setsLabel = defaults.string(forKey: "setsLabel") ?? " Legs"
-//		let cancel = defaults.string(forKey: "cancelLabel") ?? "Cancel"
+		doneNavigatorButton.title = Language.done
+		self.navigationItem.leftBarButtonItem?.title = Language.done
+		// Set Buttons Titles:
+		let starting = Language.startingWith
+		let points = Language.points
+		let turnsLabel = Language.spaceTurns
+		let players = Language.spacePlayers
+		
+		let lang = Language.language
+		let setsLabel = "\(Language.space)\(Language.legs)"
 		
 		startingScoreButton.setTitle( "\(starting)\(String(startingToGo))\(points)", for: .normal)
 		numberOfTurnsButton.setTitle( "\(String(turnsNumber))\(turnsLabel)", for: .normal)
 		numberOfSetsButton.setTitle("\(setsNumber) \(setsLabel)", for: .normal)
 		numberOfPlayersButton.setTitle("\(String(playersNumber))\(players)", for: .normal)
 		setLanguageButton.setTitle(lang, for: .normal)
-//		cancelLabel.setTitle(cancel, for: .normal)
 		
 	}
 	func setPlayers(playersA: [String], playersB: [String]) {
@@ -98,22 +104,6 @@ class SettingsViewController: MotherViewController, UITextFieldDelegate {
 		if i < count { playerB5.setTitle(playersB[i], for: .normal); i += 1 }
 		if i < count { playerB6.setTitle(playersB[i], for: .normal); i += 1 }
 	}
-//	@IBAction func setPlayer(_ sender: Any) {
-//		insertNewPlayer()
-//	}
-//	func insertNewPlayer() {
-//		let playerName = searchBar.text!
-//		players.append(playerName)
-//		allPlayers.append(playerName)
-//		//			currentNameArray = allPlayers
-//		setPlayerToButton(playerName: playerName)
-//		selectNextPlayer()
-//		searchBar.text = ""
-//
-//		tableView.updateFocusIfNeeded()
-//		searchBar.updateFocusIfNeeded()
-//		tableView.reloadData()
-//	}
 
 	func clearSelectedButtons() {
 		playerA1.backgroundColor = UIColor.clear
@@ -258,22 +248,22 @@ class SettingsViewController: MotherViewController, UITextFieldDelegate {
 	func setNumberOfPlayers() {
 		var numPlayers = 6
 		let setNumPlayers = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-		setNumPlayers.addAction(UIAlertAction(title: "Two Players", style: .default, handler: { (action: UIAlertAction!) in
+		setNumPlayers.addAction(UIAlertAction(title: "1\(Language.spacePlayers)", style: .default, handler: { (action: UIAlertAction!) in
 			self.setHiddenPlayers(numPlayers: 2)
 		}))
-		setNumPlayers.addAction(UIAlertAction(title: "Four Players", style: .default, handler: { (action: UIAlertAction!) in
+		setNumPlayers.addAction(UIAlertAction(title: "4\(Language.spacePlayers)", style: .default, handler: { (action: UIAlertAction!) in
 			self.setHiddenPlayers(numPlayers: 4)
 		}))
-		setNumPlayers.addAction(UIAlertAction(title: "Six Players", style: .default, handler: { (action: UIAlertAction!) in
+		setNumPlayers.addAction(UIAlertAction(title: "6\(Language.spacePlayers)", style: .default, handler: { (action: UIAlertAction!) in
 			self.setHiddenPlayers(numPlayers: 6)
 		}))
-		setNumPlayers.addAction(UIAlertAction(title: "Eight Players", style: .default, handler: { (action: UIAlertAction!) in
+		setNumPlayers.addAction(UIAlertAction(title: "8\(Language.spacePlayers)", style: .default, handler: { (action: UIAlertAction!) in
 			self.setHiddenPlayers(numPlayers: 8)
 		}))
-		setNumPlayers.addAction(UIAlertAction(title: "Ten Players", style: .default, handler: { (action: UIAlertAction!) in
+		setNumPlayers.addAction(UIAlertAction(title: "10\(Language.spacePlayers)", style: .default, handler: { (action: UIAlertAction!) in
 			self.setHiddenPlayers(numPlayers: 10)
 		}))
-		setNumPlayers.addAction(UIAlertAction(title: "Twelve Players", style: .default, handler: { (action: UIAlertAction!) in
+		setNumPlayers.addAction(UIAlertAction(title: "12\(Language.spacePlayers)", style: .default, handler: { (action: UIAlertAction!) in
 			self.setHiddenPlayers(numPlayers: 12)
 		}))
 		setNumPlayers.popoverPresentationController?.sourceView = self.view
@@ -304,12 +294,12 @@ class SettingsViewController: MotherViewController, UITextFieldDelegate {
 			Language.setLanguageDefaults(with: "english")
 			self.setButtonsLabels()
 		}))
-		setLanguageView.addAction(UIAlertAction(title: "Japanese", style: .default, handler: { (action: UIAlertAction!) in
-			Language.setLanguageDefaults(with: "japanese")
-			self.setButtonsLabels()
-		}))
 		setLanguageView.addAction(UIAlertAction(title: "Portuguese", style: .default, handler: { (action: UIAlertAction!) in
 			Language.setLanguageDefaults(with: "portuguese")
+			self.setButtonsLabels()
+		}))
+		setLanguageView.addAction(UIAlertAction(title: "日本語", style: .default, handler: { (action: UIAlertAction!) in
+			Language.setLanguageDefaults(with: "japanese")
 			self.setButtonsLabels()
 		}))
 		setLanguageView.popoverPresentationController?.sourceView = self.view
@@ -373,7 +363,7 @@ class SettingsViewController: MotherViewController, UITextFieldDelegate {
 	}
 	func setNumbTurns(num: Int) {
 		turnsNumber = num
-		numberOfTurnsButton.setTitle("\(num) Turns", for: .normal)
+		numberOfTurnsButton.setTitle("\(num) \(Language.spaceTurns)", for: .normal)
 	}
 	func setNumberOfSets() { //1, 3 , 5, 7, 9, 11, 13 legs
 		let numSets = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
@@ -404,17 +394,17 @@ class SettingsViewController: MotherViewController, UITextFieldDelegate {
 		present(numSets, animated: true, completion: nil)
 		func setNumSets(num: Int) {
 			setsNumber = num
-			numberOfSetsButton.setTitle("\(num) Legs", for: .normal)
+			numberOfSetsButton.setTitle("\(num)\(Language.space)", for: .normal)
 		}
 	}
 	
 	@IBAction func addPlayer(_ sender: UIBarButtonItem) {
 		
-		let alert = UIAlertController(title: "New Player",
+		let alert = UIAlertController(title: Language.newPlayer,
 									  message: nil,
 									  preferredStyle: .alert)
 		
-		let saveAction = UIAlertAction(title: "Save", style: .default) { [unowned self] action in
+		let saveAction = UIAlertAction(title: Language.save, style: .default) { [unowned self] action in
 			trySavePlayer()
 		}
 		func trySavePlayer() {
@@ -436,7 +426,7 @@ class SettingsViewController: MotherViewController, UITextFieldDelegate {
 			savePlayer(name: nameToSave)
 		}
 		
-		let cancelAction = UIAlertAction(title: "Cancel",
+		let cancelAction = UIAlertAction(title: Language.cancel,
 										 style: .cancel)
 		alert.addTextField()
 		
@@ -457,18 +447,18 @@ class SettingsViewController: MotherViewController, UITextFieldDelegate {
 	@IBAction func dismissSettingsView(_ sender: Any) {
 		var newPlayersA = [String]()
 		var newPlayersB = [String]()
-		newPlayersA.append(playerA1.titleLabel?.text ?? "Player 1")
-		if !playerA2.isHidden { newPlayersA.append(playerA2.titleLabel?.text ?? "Player 2") }
-		if !playerA3.isHidden { newPlayersA.append(playerA3.titleLabel?.text ?? "Player 3") }
-		if !playerA4.isHidden { newPlayersA.append(playerA4.titleLabel?.text ?? "Player 4") }
-		if !playerA5.isHidden { newPlayersA.append(playerA5.titleLabel?.text ?? "Player 5") }
-		if !playerA6.isHidden { newPlayersA.append(playerA6.titleLabel?.text ?? "Player 6") }
-		newPlayersB.append(playerB1.titleLabel?.text ?? "Player 2")
-		if !playerB2.isHidden { newPlayersB.append(playerB2.titleLabel?.text ?? "Player 2") }
-		if !playerB3.isHidden { newPlayersB.append(playerB3.titleLabel?.text ?? "Player 3") }
-		if !playerB4.isHidden { newPlayersB.append(playerB4.titleLabel?.text ?? "Player 4") }
-		if !playerB5.isHidden { newPlayersB.append(playerB5.titleLabel?.text ?? "Player 5") }
-		if !playerB6.isHidden { newPlayersB.append(playerB6.titleLabel?.text ?? "Player 6") }
+		newPlayersA.append(playerA1.titleLabel?.text ?? "\(Language.player) 1")
+		if !playerA2.isHidden { newPlayersA.append(playerA2.titleLabel?.text ?? "\(Language.player) 2") }
+		if !playerA3.isHidden { newPlayersA.append(playerA3.titleLabel?.text ?? "\(Language.player) 3") }
+		if !playerA4.isHidden { newPlayersA.append(playerA4.titleLabel?.text ?? "\(Language.player) 4") }
+		if !playerA5.isHidden { newPlayersA.append(playerA5.titleLabel?.text ?? "\(Language.player) 5") }
+		if !playerA6.isHidden { newPlayersA.append(playerA6.titleLabel?.text ?? "\(Language.player) 6") }
+		newPlayersB.append(playerB1.titleLabel?.text ?? "\(Language.player) 2")
+		if !playerB2.isHidden { newPlayersB.append(playerB2.titleLabel?.text ?? "\(Language.player) 2") }
+		if !playerB3.isHidden { newPlayersB.append(playerB3.titleLabel?.text ?? "\(Language.player) 3") }
+		if !playerB4.isHidden { newPlayersB.append(playerB4.titleLabel?.text ?? "\(Language.player) 4") }
+		if !playerB5.isHidden { newPlayersB.append(playerB5.titleLabel?.text ?? "\(Language.player) 5") }
+		if !playerB6.isHidden { newPlayersB.append(playerB6.titleLabel?.text ?? "\(Language.player) 6") }
 		
 		playersA = newPlayersA
 		playersB = newPlayersB
