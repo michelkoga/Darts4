@@ -18,10 +18,10 @@ class ScoreViewController: MotherViewController {
 	
 	
 	// Constraints:
-	@IBOutlet weak var tableViewBottomConstraints: NSLayoutConstraint!
-	@IBOutlet weak var keyboardTopConstraint: NSLayoutConstraint!
+//	@IBOutlet weak var tableViewBottomConstraints: NSLayoutConstraint!
+//	@IBOutlet weak var keyboardTopConstraint: NSLayoutConstraint!
 	@IBOutlet weak var keyboardHeightConstraint: NSLayoutConstraint!
-	@IBOutlet weak var keyboardBottomConstraint: NSLayoutConstraint!
+//	@IBOutlet weak var keyboardBottomConstraint: NSLayoutConstraint!
 	
 //	@IBOutlet weak var keyboardHeight: NSLayoutConstraint!
 //	@IBOutlet weak var keyboardBottom: NSLayoutConstraint!
@@ -40,13 +40,13 @@ class ScoreViewController: MotherViewController {
 	
 	
 	// Above Header
-	@IBOutlet weak var labelAName: BoardLabel! // Don't need
+//	@IBOutlet weak var labelAName: BoardLabel! // Don't need
 	@IBOutlet weak var labelAScore: BoardLabel! // Check
 	@IBOutlet weak var labelBScore: BoardLabel! // Check
 	@IBOutlet weak var headerCenterLabel: UILabel!
 	@IBOutlet weak var labelAToGo: UILabel! // Check
 	@IBOutlet weak var labelBToGo: UILabel! // Check
-	@IBOutlet weak var labelBName: BoardLabel! // Don't need
+//	@IBOutlet weak var labelBName: BoardLabel! // Don't need
 	
 	
 	@IBOutlet weak var headerAName: BoardLabel!
@@ -197,21 +197,21 @@ class ScoreViewController: MotherViewController {
 				nextGameButton.setTitle("New Game", for: .normal)
 				
 				updatePlayers()
-				print("********** Team A ******************************")
-				for player in playersToSaveA {
-					print("Player: \(player.name), scores: \(player.scores)")
-					print("\(player.legs) legs, \(player.turns) turns, \(player.wins) wins")
-					print("****************************************")
-				}
-				print("********** Team B ******************************")
-				for player in playersToSaveB {
-					print("Team B: \(player.name), scores: \(player.scores)")
-					print("\(player.legs) legs, \(player.turns) turns, \(player.wins) wins")
-					print("****************************************")
-				}
-				print("****************************************")
-				print("****************************************")
-				print("****************************************")
+//				print("********** Team A ******************************")
+//				for player in playersToSaveA {
+//					print("Player: \(player.name), scores: \(player.scores)")
+//					print("\(player.legs) legs, \(player.turns) turns, \(player.wins) wins")
+//					print("****************************************")
+//				}
+//				print("********** Team B ******************************")
+//				for player in playersToSaveB {
+//					print("Team B: \(player.name), scores: \(player.scores)")
+//					print("\(player.legs) legs, \(player.turns) turns, \(player.wins) wins")
+//					print("******ttttt**********************************")
+//				}
+//				print("****************************************")
+//				print("****************************************")
+//				print("****************************************")
 			case nil:
 				nextGameButton.setTitle("Next Leg", for: .normal)
 				hiddenView.isHidden = true
@@ -330,11 +330,11 @@ class ScoreViewController: MotherViewController {
 					}
 					let newMatchData = matchScoresData + matchAverage
 					playerData.setValue(newMatchData, forKey: "matchAverages")
-					print("\(player.name) average is \(matchAverage)")
-					guard let testAverage = playerData.value(forKey: "matchAverages") as? [Float] else { print("test average fail."); return }
-					for average in testAverage {
-						print("test average: \(average)")
-					}
+//					print("\(player.name) average is \(matchAverage)")
+//					guard let testAverage = playerData.value(forKey: "matchAverages") as? [Float] else { print("test average fail."); return }
+//					for average in testAverage {
+//						print("test average: \(average)")
+//					}
 				}
 			}
 		}
@@ -489,7 +489,7 @@ class ScoreViewController: MotherViewController {
 		tableView.delegate = self
 		tableView.dataSource = self
 		
-		createTestData()
+//		createTestData()
 		
 	}
 	override func viewWillAppear(_ animated: Bool) {
@@ -546,7 +546,7 @@ class ScoreViewController: MotherViewController {
 	// #######################################
 	func createTestData() {
 		fetchAllPlayers()
-		print("####################################### allPlayersData: \(allPlayersData)")
+//		print("####################################### allPlayersData: \(allPlayersData)")
 		
 		let names = ["John","Jonathan","Marco","Lucy","Michael","Matt","William","Sarah"]
 		let averages1: [Float] = [40, 45, 44, 46.2, 50, 48, 51, 50, 60, 55, 58, 60, 58, 62, 55, 66.2, 70, 64, 72, 68, 74, 80, 73, 81]

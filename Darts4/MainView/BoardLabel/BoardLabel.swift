@@ -36,49 +36,131 @@ class turnLabel: BoardLabel {
 	}
 }
 class ScoreLabel: BoardLabel {
-	let circleLayer = CAShapeLayer()
+	weak var shapeLayer: CAShapeLayer?
 	override func draw(_ rect: CGRect) {
 		super.draw(rect)
-		//		if (self.text?.count)! > 3 {
-		//			let text = String((self.text?.dropLast())!)
-		//			self.text = text
-		//		}
-//		self.layer.cornerRadius = 10
-//		self.layer.borderWidth = 3.0
+		////
+		
+		
+		////
+		
 		var minBestScore = 50
 		if UserDefaults.standard.contains(key: "minNiceValue") {
 			minBestScore = UserDefaults.standard.integer(forKey: "minNiceValue")
 		}
+		
 		if self.text != "" {
 			if Int(self.text!) != nil {
 				if Int(self.text!)! >= minBestScore {
 					self.drawCircle()
-					//				self.addCircleView()
 				}
 			}
 		}
-		
-		let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: 0.0, endAngle: CGFloat(.pi * 2.0), clockwise: true)
-		
-		// Setup the CAShapeLayer with the path, colors, and line width
-		//		circleLayer = CAShapeLayer()
-		circleLayer.path = circlePath.cgPath
-		circleLayer.fillColor = UIColor.clear.cgColor
-		circleLayer.strokeColor = UIColor.red.cgColor
-		circleLayer.lineWidth = 5.0;
-		
-		// Don't draw the circle initially
-		circleLayer.strokeEnd = 0.0
-		
-		// Add the circleLayer to the view's layer's sublayers
-		layer.addSublayer(circleLayer)
-		
-		
-		
-		
-		
 	}
 	
+	var currentAngle:Float = -90
+	
+	let timeBetweenDraw:CFTimeInterval = 0.01
+	
+	// MARK: Init
+	required init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+		setup()
+	}
+	
+	override init(frame: CGRect) {
+		super.init(frame: frame)
+		setup()
+	}
+	
+	func setup() {
+		self.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+		Timer.scheduledTimer(timeInterval: timeBetweenDraw, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+	}
+	
+	// MARK: Drawing
+	@objc func updateTimer() {
+		
+		if currentAngle < 270 {
+			currentAngle += 1
+			setNeedsDisplay()
+		}
+	}
+	func drawAnimatedEllipse3() {
+		//
+		let width = self.frame.width
+		let height = self.frame.height
+		
+		let pointLeft = CGPoint(x: 0, y: height / 2)
+		let pointUp = CGPoint(x: width / 2, y: 0)
+		let pointRight = CGPoint(x: width, y: height / 2)
+		let pointDown = CGPoint(x: width / 2, y: height)
+		
+		let upLeft = CGPoint(x: 0, y: 0)
+		let upRight = CGPoint(x: width, y: 0)
+		let downRight = CGPoint(x: width, y: height)
+		let downLeft = CGPoint(x: 0, y: height)
+		
+		let context = UIGraphicsGetCurrentContext()
+		context?.setLineWidth(3.0)
+		context?.setStrokeColor(#colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1))    // make circle rect 5 px from border
+		var circleRect = CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height)
+		circleRect = circleRect.insetBy(dx: 2, dy: 2)
+		
+		// draw circle
+		context?.move(to: pointLeft)
+		context?.addQuadCurve(to: pointUp, control: upLeft)
+		context?.addQuadCurve(to: pointRight, control: upRight)
+		context?.addQuadCurve(to: pointDown, control: downRight)
+		context?.addQuadCurve(to: pointLeft, control: downLeft)
+		
+		context?.strokePath()
+	}
+	func drawAnimatedEllipse2() {
+		let context = UIGraphicsGetCurrentContext()
+		
+		let path = CGMutablePath()
+		path.addRoundedRect(in: self.frame, cornerWidth: self.frame.width, cornerHeight: self.frame.height)
+//		CGPathAddArc(path, nil, 20, 10, 20, 0, .pi, false)
+		
+		context!.addPath(path)
+		context!.setStrokeColor(#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1))
+//		CGContextSetStrokeColorWithColor(context!, UIColor.blue.CGColor)
+		context!.setLineWidth(3)
+		context!.strokePath()
+	}
+	
+	func drawAnimatedEllipse() {
+		let width = self.frame.width
+		let height = self.frame.height
+		// create whatever path you want
+		
+		let path = UIBezierPath()
+		path.move(to: CGPoint(x: 10, y: 50))
+		path.addArc(withCenter: CGPoint(x: width / 2, y: height / 2), radius: height / 2, startAngle: 0.0, endAngle: 1.0, clockwise: true)
+		path.addCurve(to: CGPoint(x: 20, y: 20), controlPoint1: CGPoint(x: 5, y: -10), controlPoint2: CGPoint(x: 10, y: 30))
+
+		
+		// create shape layer for that path
+		
+		let shapeLayer = CAShapeLayer()
+		shapeLayer.fillColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0).cgColor
+		shapeLayer.strokeColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1).cgColor
+		shapeLayer.lineWidth = 4
+		shapeLayer.path = path.cgPath
+		
+		// animate it
+		
+		self.layer.addSublayer(shapeLayer)
+		let animation = CABasicAnimation(keyPath: "strokeEnd")
+		animation.fromValue = 0
+		animation.duration = 2
+		shapeLayer.add(animation, forKey: "MyAnimation")
+		
+		// save shape layer
+		
+		self.shapeLayer = shapeLayer
+	}
 	
 	
 	func drawCircle() {

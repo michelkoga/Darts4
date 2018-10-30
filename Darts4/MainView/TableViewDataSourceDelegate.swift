@@ -53,11 +53,12 @@ extension ScoreViewController: UITableViewDataSource, UITableViewDelegate {
 			switch teamTurn {
 			case 0:
 				cell.scoreA.backgroundColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 1)
+//				cell.scoreA.drawAnimatedEllipse()
 				
 				cell.playerA.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 			case 1:
 				cell.scoreB.backgroundColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 1)
-				
+//				cell.scoreB.drawAnimatedEllipse()
 				cell.playerB.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 			default:
 				break

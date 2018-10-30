@@ -70,8 +70,8 @@ class ScoresCell: UITableViewCell {
 	@IBOutlet weak var playerA: UILabel!
 	@IBOutlet weak var playerB: UILabel!
 	
-	@IBOutlet weak var scoreA: UILabel!
-	@IBOutlet weak var scoreB: UILabel!
+	@IBOutlet weak var scoreA: ScoreLabel!
+	@IBOutlet weak var scoreB: ScoreLabel!
 	
 	@IBOutlet weak var toGoA: UILabel!
 	@IBOutlet weak var toGoB: UILabel!

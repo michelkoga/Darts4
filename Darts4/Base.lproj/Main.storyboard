@@ -150,10 +150,10 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rnQ-8V-Afv">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="814" height="40"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Name" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Orh-kQ-92O" customClass="BoardLabel" customModule="Darts4" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="53.5" height="40"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="116.5" height="40"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -165,7 +165,7 @@
                                                                     </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="GVa-gF-wRL" customClass="CrossedLabel" customModule="Darts4" customModuleProvider="target">
-                                                                    <rect key="frame" x="53.5" y="0.0" width="53.5" height="40"/>
+                                                                    <rect key="frame" x="116.5" y="0.0" width="116" height="40"/>
                                                                     <color key="backgroundColor" white="0.070000000000000007" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -178,7 +178,7 @@
                                                                     </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="749" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PSY-4J-rEZ" customClass="BoardLabel" customModule="Darts4" customModuleProvider="target">
-                                                                    <rect key="frame" x="107" y="0.0" width="53.5" height="40"/>
+                                                                    <rect key="frame" x="232.5" y="0.0" width="116.5" height="40"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     <nil key="highlightedColor"/>
@@ -190,7 +190,7 @@
                                                                     </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="748" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cZ7-7e-wcf" customClass="turnLabel" customModule="Darts4" customModuleProvider="target">
-                                                                    <rect key="frame" x="160.5" y="0.0" width="54" height="40"/>
+                                                                    <rect key="frame" x="349" y="0.0" width="116" height="40"/>
                                                                     <color key="backgroundColor" white="0.070000000000000007" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                                     <color key="textColor" red="0.2784313725" green="0.70588235290000001" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -203,7 +203,7 @@
                                                                     </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="749" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="1GF-Hg-p8Z" customClass="CrossedLabel" customModule="Darts4" customModuleProvider="target">
-                                                                    <rect key="frame" x="214.5" y="0.0" width="53.5" height="40"/>
+                                                                    <rect key="frame" x="465" y="0.0" width="116.5" height="40"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     <nil key="highlightedColor"/>
@@ -215,7 +215,7 @@
                                                                     </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xba-c3-Nox" customClass="BoardLabel" customModule="Darts4" customModuleProvider="target">
-                                                                    <rect key="frame" x="268" y="0.0" width="53.5" height="40"/>
+                                                                    <rect key="frame" x="581.5" y="0.0" width="116" height="40"/>
                                                                     <color key="backgroundColor" white="0.070000000000000007" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -228,7 +228,7 @@
                                                                     </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Name" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnF-Ol-ZnN" customClass="BoardLabel" customModule="Darts4" customModuleProvider="target">
-                                                                    <rect key="frame" x="321.5" y="0.0" width="53.5" height="40"/>
+                                                                    <rect key="frame" x="697.5" y="0.0" width="116.5" height="40"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -253,23 +253,23 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N35-Mk-E8P">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="814" height="50"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCF-5f-geu" userLabel="topView">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="814" height="5"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="5" id="EAk-Zd-AcP"/>
                                                                     </constraints>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VnK-V4-5kB" userLabel="midleView">
-                                                                    <rect key="frame" x="0.0" y="5" width="375" height="40"/>
+                                                                    <rect key="frame" x="0.0" y="5" width="814" height="40"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JWd-7F-rXx">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="814" height="40"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6E-LX-Ct4" customClass="FooterLabels" customModule="Darts4" customModuleProvider="target">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="53.5" height="40"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="116.5" height="40"/>
                                                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -282,7 +282,7 @@
                                                                                     </variation>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Bx-H6-otb" customClass="FooterLabels" customModule="Darts4" customModuleProvider="target">
-                                                                                    <rect key="frame" x="53.5" y="0.0" width="53.5" height="40"/>
+                                                                                    <rect key="frame" x="116.5" y="0.0" width="116" height="40"/>
                                                                                     <color key="backgroundColor" white="0.070000000000000007" alpha="1" colorSpace="calibratedWhite"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -295,7 +295,7 @@
                                                                                     </variation>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="N2a-ia-4co" customClass="FooterLabels" customModule="Darts4" customModuleProvider="target">
-                                                                                    <rect key="frame" x="107" y="0.0" width="53.5" height="40"/>
+                                                                                    <rect key="frame" x="232.5" y="0.0" width="116.5" height="40"/>
                                                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -308,7 +308,7 @@
                                                                                     </variation>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="4bY-Wb-6jS" customClass="TurnFooterLabel" customModule="Darts4" customModuleProvider="target">
-                                                                                    <rect key="frame" x="160.5" y="0.0" width="54" height="40"/>
+                                                                                    <rect key="frame" x="349" y="0.0" width="116" height="40"/>
                                                                                     <color key="backgroundColor" white="0.070000000000000007" alpha="1" colorSpace="calibratedWhite"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                                                     <color key="textColor" red="0.2784313725" green="0.70588235290000001" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -321,7 +321,7 @@
                                                                                     </variation>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="cFu-Kz-xHJ" customClass="FooterLabels" customModule="Darts4" customModuleProvider="target">
-                                                                                    <rect key="frame" x="214.5" y="0.0" width="53.5" height="40"/>
+                                                                                    <rect key="frame" x="465" y="0.0" width="116.5" height="40"/>
                                                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -334,7 +334,7 @@
                                                                                     </variation>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="drn-5d-ZD0" customClass="FooterLabels" customModule="Darts4" customModuleProvider="target">
-                                                                                    <rect key="frame" x="268" y="0.0" width="53.5" height="40"/>
+                                                                                    <rect key="frame" x="581.5" y="0.0" width="116" height="40"/>
                                                                                     <color key="backgroundColor" white="0.070000000000000007" alpha="1" colorSpace="calibratedWhite"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -347,7 +347,7 @@
                                                                                     </variation>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9d4-qB-pXz" customClass="FooterLabels" customModule="Darts4" customModuleProvider="target">
-                                                                                    <rect key="frame" x="321.5" y="0.0" width="53.5" height="40"/>
+                                                                                    <rect key="frame" x="697.5" y="0.0" width="116.5" height="40"/>
                                                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -372,7 +372,7 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s5S-Xm-QDE" userLabel="BottomView">
-                                                                    <rect key="frame" x="0.0" y="45" width="375" height="5"/>
+                                                                    <rect key="frame" x="0.0" y="45" width="814" height="5"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="5" id="h2L-kT-Y36"/>
@@ -412,13 +412,13 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PB1-z4-CwD" userLabel="InnerView">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="814" height="50.5"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2S3-dJ-7Me">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="814" height="50.5"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Michel" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6Y-Qt-TXK" customClass="BoardLabel" customModule="Darts4" customModuleProvider="target">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="53.5" height="43.5"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="116.5" height="50.5"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <nil key="highlightedColor"/>
@@ -430,7 +430,7 @@
                                                                                     </variation>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="k62-nS-VXV" customClass="ScoreLabel" customModule="Darts4" customModuleProvider="target">
-                                                                                    <rect key="frame" x="53.5" y="0.0" width="53.5" height="43.5"/>
+                                                                                    <rect key="frame" x="116.5" y="0.0" width="116" height="50.5"/>
                                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -443,7 +443,7 @@
                                                                                     </variation>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EX3-XZ-56K" customClass="BoardLabel" customModule="Darts4" customModuleProvider="target">
-                                                                                    <rect key="frame" x="107" y="0.0" width="53.5" height="43.5"/>
+                                                                                    <rect key="frame" x="232.5" y="0.0" width="116.5" height="50.5"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                                     <nil key="highlightedColor"/>
@@ -455,7 +455,7 @@
                                                                                     </variation>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="120" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Tvs-IB-dgR" customClass="turnLabel" customModule="Darts4" customModuleProvider="target">
-                                                                                    <rect key="frame" x="160.5" y="0.0" width="54" height="43.5"/>
+                                                                                    <rect key="frame" x="349" y="0.0" width="116" height="50.5"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                                                     <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <nil key="highlightedColor"/>
@@ -467,7 +467,7 @@
                                                                                     </variation>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="fZo-SG-ewp" customClass="ScoreLabel" customModule="Darts4" customModuleProvider="target">
-                                                                                    <rect key="frame" x="214.5" y="0.0" width="53.5" height="43.5"/>
+                                                                                    <rect key="frame" x="465" y="0.0" width="116.5" height="50.5"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                                     <nil key="highlightedColor"/>
@@ -479,7 +479,7 @@
                                                                                     </variation>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="SHb-8t-RM0" customClass="BoardLabel" customModule="Darts4" customModuleProvider="target">
-                                                                                    <rect key="frame" x="268" y="0.0" width="53.5" height="43.5"/>
+                                                                                    <rect key="frame" x="581.5" y="0.0" width="116" height="50.5"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                                     <nil key="highlightedColor"/>
@@ -491,7 +491,7 @@
                                                                                     </variation>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Player" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBo-QP-ehs" customClass="BoardLabel" customModule="Darts4" customModuleProvider="target">
-                                                                                    <rect key="frame" x="321.5" y="0.0" width="53.5" height="43.5"/>
+                                                                                    <rect key="frame" x="697.5" y="0.0" width="116.5" height="50.5"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <nil key="highlightedColor"/>
@@ -508,7 +508,7 @@
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="bottom" secondItem="2S3-dJ-7Me" secondAttribute="bottom" id="96m-Xo-m84"/>
-                                                                        <constraint firstAttribute="height" constant="43.666666666666664" id="FA2-iP-NwV"/>
+                                                                        <constraint firstAttribute="height" constant="50" id="FA2-iP-NwV"/>
                                                                         <constraint firstItem="2S3-dJ-7Me" firstAttribute="leading" secondItem="PB1-z4-CwD" secondAttribute="leading" id="J4E-MK-Zkc"/>
                                                                         <constraint firstItem="2S3-dJ-7Me" firstAttribute="top" secondItem="PB1-z4-CwD" secondAttribute="top" id="Qzp-vN-VEk"/>
                                                                         <constraint firstAttribute="trailing" secondItem="2S3-dJ-7Me" secondAttribute="trailing" id="Vj4-bH-dPQ"/>
@@ -791,7 +791,7 @@
                                                     </stackView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="500" id="vNF-Zd-0gR"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="500" id="vNF-Zd-0gR"/>
                                                 </constraints>
                                                 <variation key="heightClass=regular-widthClass=compact">
                                                     <mask key="constraints">
@@ -812,7 +812,7 @@
                                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                                                 <variation key="heightClass=regular-widthClass=regular" constant="120"/>
                                             </constraint>
-                                            <constraint firstAttribute="height" constant="300" id="Wp5-qq-qp2">
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="Wp5-qq-qp2">
                                                 <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
                                                 <variation key="heightClass=regular-widthClass=compact" constant="200"/>
                                                 <variation key="heightClass=regular-widthClass=regular" constant="250"/>
@@ -945,7 +945,7 @@
                         <outlet property="key7" destination="a87-63-PcH" id="gBA-ao-2FA"/>
                         <outlet property="key8" destination="TTQ-lB-U0b" id="2f6-zv-gJ3"/>
                         <outlet property="key9" destination="5dS-O3-5MW" id="928-mB-36v"/>
-                        <outlet property="keyboardHeightConstraint" destination="Wp5-qq-qp2" id="CkI-gY-vHL"/>
+                        <outlet property="keyboardHeightConstraint" destination="Wp5-qq-qp2" id="Odl-h5-7Gd"/>
                         <outlet property="keyboardView" destination="JyE-Z3-Wt2" id="JaI-G3-FPo"/>
                         <outlet property="labelAScore" destination="dhf-aV-XUZ" id="BHa-08-8wc"/>
                         <outlet property="labelAToGo" destination="0L2-oV-QoD" id="WEJ-kO-kdQ"/>
@@ -977,7 +977,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="794" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="120" translatesAutoresizingMaskIntoConstraints="NO" id="hqV-I5-Cyc" customClass="GrayLabel" customModule="Darts4" customModuleProvider="target">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="120" translatesAutoresizingMaskIntoConstraints="NO" id="hqV-I5-Cyc" customClass="GrayLabel" customModule="Darts4" customModuleProvider="target">
                                             <rect key="frame" x="15" y="0.0" width="120" height="44"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="GSn-u5-iBF"/>
@@ -991,7 +991,16 @@
                                                 </mask>
                                             </variation>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Games/Wins" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="80" translatesAutoresizingMaskIntoConstraints="NO" id="8eP-AM-p8l" customClass="GrayLabel" customModule="Darts4" customModuleProvider="target">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="246" verticalHuggingPriority="251" text="Average" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzb-mP-VIr" customClass="GrayLabel" customModule="Darts4" customModuleProvider="target">
+                                            <rect key="frame" x="275" y="0.0" width="511" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="pMF-nu-HSA"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Games/Wins" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="80" translatesAutoresizingMaskIntoConstraints="NO" id="8eP-AM-p8l" customClass="GrayLabel" customModule="Darts4" customModuleProvider="target">
                                             <rect key="frame" x="145" y="0.0" width="120" height="44"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="X1I-CE-cor"/>
@@ -1005,29 +1014,20 @@
                                                 </mask>
                                             </variation>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzb-mP-VIr" customClass="GrayLabel" customModule="Darts4" customModuleProvider="target">
-                                            <rect key="frame" x="285" y="0.0" width="120" height="44"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="4Ne-0D-9y3"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="8eP-AM-p8l" firstAttribute="top" secondItem="IXE-2i-Zf2" secondAttribute="top" id="1n7-fQ-nVa"/>
                                         <constraint firstItem="Zzb-mP-VIr" firstAttribute="top" secondItem="IXE-2i-Zf2" secondAttribute="top" id="AKY-Uh-4wT"/>
+                                        <constraint firstItem="Zzb-mP-VIr" firstAttribute="leading" secondItem="8eP-AM-p8l" secondAttribute="trailing" constant="10" id="CVQ-5t-9Lh"/>
                                         <constraint firstAttribute="bottom" secondItem="8eP-AM-p8l" secondAttribute="bottom" id="GQc-c3-eBR"/>
                                         <constraint firstAttribute="bottom" secondItem="hqV-I5-Cyc" secondAttribute="bottom" id="JqU-Q9-0IX"/>
-                                        <constraint firstItem="Zzb-mP-VIr" firstAttribute="leading" secondItem="8eP-AM-p8l" secondAttribute="trailing" constant="20" id="PYU-xH-OdB"/>
-                                        <constraint firstItem="8eP-AM-p8l" firstAttribute="leading" secondItem="hqV-I5-Cyc" secondAttribute="trailing" constant="10" id="VWb-Zw-DOm"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Zzb-mP-VIr" secondAttribute="trailing" id="OYd-Bn-vu7"/>
+                                        <constraint firstItem="8eP-AM-p8l" firstAttribute="leading" secondItem="hqV-I5-Cyc" secondAttribute="trailing" constant="10" id="TZw-xw-Qya"/>
                                         <constraint firstItem="hqV-I5-Cyc" firstAttribute="leading" secondItem="IXE-2i-Zf2" secondAttribute="leading" constant="15" id="ZWS-1B-SgZ">
                                             <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                                         </constraint>
-                                        <constraint firstAttribute="bottom" secondItem="Zzb-mP-VIr" secondAttribute="bottom" id="rTv-bj-rQj"/>
-                                        <constraint firstAttribute="trailing" secondItem="Zzb-mP-VIr" secondAttribute="trailing" id="vTB-z6-rWn"/>
+                                        <constraint firstAttribute="bottom" secondItem="Zzb-mP-VIr" secondAttribute="bottom" priority="750" id="rTv-bj-rQj"/>
                                         <constraint firstItem="hqV-I5-Cyc" firstAttribute="top" secondItem="IXE-2i-Zf2" secondAttribute="top" id="vmT-1D-AI4"/>
                                     </constraints>
                                     <variation key="heightClass=regular-widthClass=compact">
@@ -1087,13 +1087,13 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="247" verticalHuggingPriority="247" horizontalCompressionResistancePriority="247" verticalCompressionResistancePriority="247" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bm6-uz-55P" customClass="GrayLabel" customModule="Darts4" customModuleProvider="target">
-                                                    <rect key="frame" x="290" y="0.0" width="75" height="43.5"/>
+                                                    <rect key="frame" x="290" y="0.0" width="504" height="43.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Npz-Jo-CoG">
-                                                    <rect key="frame" x="0.0" y="0.0" width="365" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="794" height="43.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <state key="normal">
                                                         <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1548,7 +1548,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xqu-6i-Vgj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="355" height="29.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="814" height="29.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
