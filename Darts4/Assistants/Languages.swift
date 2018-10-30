@@ -197,7 +197,7 @@ class Language {
 			spacePoints = "点から"
 			cancel = "キャンセル"
 			settings = "設定"
-			toGo = "あと"
+			toGo = "残り"
 			oneDart =  "一本"
 			twoDarts = "二本"
 			threeDarts = "三本"

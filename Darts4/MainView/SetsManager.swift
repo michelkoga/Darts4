@@ -25,22 +25,24 @@ extension ScoreViewController {
 			}))
 			present(resetAlert, animated: true, completion: nil)
 			func setWinner(winner: String) {
-				numberOfDarts = String(row * 3)
-				gameStarted = true
-				isGameOver = true
 				switch winner {
 				case "A":
-					finishA = 1
 					legsA += 1
 				case "B":
-					finishB = 1
 					legsB += 1
 				default:
-					print("nil?")
 					break
 				}
+				legWinner = winner
+				numberOfDarts = String(row * 3)
+//				gameStarted = true
+//				isGameOver = true
 				sets = updateTableView()
+				setFinish(winner: winner)
 				tableView.reloadData()
+				
+				hideKeyboard()
+				showHiddenView()
 			}
 		}
 		
@@ -126,6 +128,11 @@ extension ScoreViewController {
 				break
 			}
 			sets = updateTableView()
+			// Set Finish Number:numberOfDarts = String(row * 3)
+			gameStarted = true
+			isGameOver = true
+			sets = updateTableView()
+			setFinish()
 			tableView.reloadData()
 		}
 	}
@@ -175,18 +182,40 @@ extension ScoreViewController {
 //		// Add One More Set(Center):
 //		let centerSet: Set = Set(playerA: "", playerB: "", scoreA: "", scoreB: "", toGoA: "", toGoB: "", turnNumber: "C", isBurst: false, isLast: false)
 //		tempSets.append(centerSet)
-		// Set Finish Number:
-		if finishA != 0 {
+		return tempSets
+	}
+	func setFinish() {
+		print("setFinish()")
+		if finishA != 0 { // A wins
 			footerFinishALabel.text = "X\(finishA)"
+			if leg % 2 != 0 { // odd legs
+				footerALabel.text = "\((row ) * 3 + finishA)d"  // start A, A wins
+				footerBLabel.text = "\((row) * 3)d"
+			} else {
+				footerALabel.text = "\((row) * 3 + finishA)d" // start B, A wins
+				footerBLabel.text = "\((row + 1) * 3)d"
+			}
 		} else if finishB != 0 {
 			footerFinishBLabel.text = "X\(finishB)"
+			if leg % 2 != 0 { // odd legs
+				footerALabel.text = "\((row + 1) * 3)d" // start A, B wins
+				footerBLabel.text = "\((row) * 3 + finishB)d"
+			} else {
+				footerALabel.text = "\((row) * 3)d" // start B, B wins
+				footerBLabel.text = "\((row) * 3 + finishB)d"
+			}
 		}
-		// set Darts Number:
-		if finishA != 0 || finishB != 0 {
-			footerALabel.text = "\((row + 1) * 3 + finishA)d"
-			footerBLabel.text = "\((row + 1) * 3 + finishB)d"
+	}
+	func setFinish(winner: String) {
+		print("setFinish(winner: String)")
+		if winner == "A" { // A wins
+			footerFinishALabel.text = "X\(1)"
+			footerALabel.text = "\((row + 1) * 3 + 1)d"  // start A, A wins
+			footerBLabel.text = "\((row + 1) * 3)d"
+		} else {
+			footerFinishBLabel.text = "X\(1)"
+			footerALabel.text = "\((row + 1) * 3)d"  // start A, A wins
+			footerBLabel.text = "\((row + 1) * 3 + 1)d"
 		}
-		
-		return tempSets
 	}
 }

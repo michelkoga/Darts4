@@ -38,6 +38,9 @@ extension ScoreViewController: UITableViewDataSource, UITableViewDelegate {
 			cell.scoreB.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
 			cell.playerB.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
 		}
+		// Restore Player text color:
+		cell.playerA.textColor = #colorLiteral(red: 0.3332984447, green: 0.3333585262, blue: 0.3332856596, alpha: 1)
+		cell.playerB.textColor = #colorLiteral(red: 0.3332984447, green: 0.3333585262, blue: 0.3332856596, alpha: 1)
 		// Set turn colors:
 		if indexPath.row % 2 == 0 {
 			cell.setNumber.textColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)

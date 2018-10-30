@@ -698,9 +698,17 @@ class ScoreViewController: MotherViewController {
 		if int == nil { return false }
 		switch teamTurn {
 		case 0:
-			if int! > toGoesA[row] ?? maxScore  { return false }
+			if toGoesA[row] != nil {
+				if int! >= toGoesA[row]! - 1 { return false }
+			} else {
+				if int! > maxScore { return false }
+			}
 		case 1:
-			if int! > toGoesB[row] ?? maxScore { return false }
+			if toGoesB[row] != nil {
+				if int! >= toGoesB[row]! - 1 { return false }
+			} else {
+				if int! > maxScore { return false }
+			}
 		default:
 			break
 			
@@ -770,8 +778,7 @@ class ScoreViewController: MotherViewController {
 		gameWinner = nil
 		gameStarted = false
 		hideHiddenView()
-//		winnerLabel.isHidden = true
-		leg = 1
+		leg = 1 //The number of legs
 		inputHolder = ""
 		rightNavigatorButton.title = Language.settings
 	}
@@ -834,6 +841,11 @@ class ScoreViewController: MotherViewController {
 		resetAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
 		present(resetAlert, animated: true, completion: nil)
 	}
+	func setRowPositionToCenter() {
+		let indexPath = IndexPath(row: row, section: 0)
+		
+		tableView.scrollToRow(at: indexPath, at: UITableView.ScrollPosition.top, animated: true)
+	}
 	// #######################################
 	// #######################################
 	// #######################################
@@ -853,6 +865,7 @@ class ScoreViewController: MotherViewController {
 				break
 			}
 			insertNumberToCurrentScore((sender.titleLabel?.text)!)
+			setRowPositionToCenter()
 		}
 	}
 	@IBAction func burst(_ sender: Any) {
@@ -879,6 +892,7 @@ class ScoreViewController: MotherViewController {
 		}
 	}
 	@IBAction func enterKeyPressed(_ sender: Any) {
+		print(row)
 		if isNotGameOver {
 			gameStarted = true
 			if inputHolder != "" {

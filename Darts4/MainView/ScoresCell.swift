@@ -16,6 +16,7 @@ class ScoresCell: UITableViewCell {
 //		self.selectedBackgroundView = selectedColorView
 //		self.selectionStyle = .none
 		
+		self.selectionStyle = .none
 		
 		if self.setNumber.tag == 99 {
 			drawHorizontalLine()

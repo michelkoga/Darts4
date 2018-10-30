@@ -54,8 +54,8 @@ class HistoryDisplayViewController: MotherViewController {
 		title = Language.stats
 		// Header:
 		nameHeaderLabel.text = Language.name
-		gamesHeaderLabel.text = Language.numberOfGames
-		winsHeaderLabel.text = Language.numberOfWins
+		gamesHeaderLabel.text = "\(Language.numberOfGames)/\(Language.numberOfWins)"
+//		winsHeaderLabel.text = Language.numberOfWins
 		averageHeaderLabel.text = Language.average
 	}
 	func showPlayerStats(playerName: String) {
@@ -122,8 +122,8 @@ extension HistoryDisplayViewController: UITabBarDelegate, UITableViewDataSource 
 		let winText = "\(wins!)"
 		let averageText = "\(average!.rounded(toPlaces: 2))"
 		cell.nameLabel.text = nameText
-		cell.gamesLabel.text = "\(games!)"
-		cell.winLabel.text = winText
+		cell.gamesLabel.text = "\(games!)/\(winText)"
+//		cell.winLabel.text = winText
 		cell.scoreAverageLabel.text = averageText
 		cell.showStatsButton.tag = indexPath.row
 		print("indexPath Value for cell: \(indexPath.row)")
