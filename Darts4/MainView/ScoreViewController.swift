@@ -755,6 +755,7 @@ class ScoreViewController: MotherViewController {
 		print(" ")
 	}
 	func newLeg() {
+		lastCellDone = false
 		resetFooter()
 		finishA = 0
 		finishB = 0
@@ -774,6 +775,7 @@ class ScoreViewController: MotherViewController {
 		scrollToFirstRoll()
 	}
 	func resetGame() {
+		lastCellDone = false
 		resetFooter()
 		finishA = 0
 		finishB = 0
@@ -856,8 +858,42 @@ class ScoreViewController: MotherViewController {
 		resetAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
 		present(resetAlert, animated: true, completion: nil)
 	}
+	var lastCellDone = false
 	var initialNumberOfVisibleRows = 4
 	func setRowPositionToCenter() {
+		let numberOfRows = tableView.numberOfRows(inSection: 0)
+//		let visibleCells = tableView.visibleCells
+		
+		var rowToGoUp = row - 1
+		if rowToGoUp == -1 { rowToGoUp = 0 }
+		
+		let rowToGoDown = row + 1
+		if rowToGoDown == numberOfRows { // is the last row:
+			print("rowToGoDown == numberOfRows: RowToGoDown -> \(rowToGoDown)")
+			
+			// Check if row is not visible:
+			// Check if it is the last visible row - 1:
+			let lastVisibleCell = tableView.visibleCells.last
+			let lastRowCell = tableView.cellForRow(at: IndexPath(row: row, section: 0))
+			if lastVisibleCell == lastRowCell {
+				print("lastVisibleCell == lastRowCell -> \(String(describing: lastVisibleCell))")
+				if lastCellDone == false {
+					let indexPath = IndexPath(row: row, section: 0)
+					tableView.scrollToRow(at: indexPath, at: UITableView.ScrollPosition.middle, animated: true)
+					lastCellDone = true
+					return
+				} else { return }
+			}
+		}
+		
+		let indexPath = IndexPath(row: row, section: 0)
+//		let indexPathOneUp = IndexPath(row: rowToGoUp, section: 0)
+		
+		let indexPathOneDown = IndexPath(row: rowToGoDown, section: 0)
+		
+
+		let currentCell = tableView.cellForRow(at: indexPathOneDown)
+		
 		let visibleRows = tableView.indexPathsForVisibleRows!
 		print("VisibleRows: \(visibleRows.map{$0.row})")
 //		let halfElements = (visibleRows.count) / 2
@@ -872,7 +908,6 @@ class ScoreViewController: MotherViewController {
 			if index == 4 { break } // Limit to only 6 indexPaths
 		}
 		
-//		let numberOfRows = tableView.numberOfRows(inSection: 0)
 //		let lastIndexPath = IndexPath(row: (numberOfRows - 1), section: 0)
 //		var  lastRows = [IndexPath]()
 //		for halfRow in 0...halfElements {
@@ -880,17 +915,20 @@ class ScoreViewController: MotherViewController {
 //			let indexP = IndexPath(row: newRow, section: 0)
 //			lastRows.append(indexP)  //cellForRow(at: IndexPath(row: newRow, section: 0)))
 //		}
-		var rowToGoUp = row - 1
-		if rowToGoUp == -1 { rowToGoUp = 0 } // Avoiding negative row
-		let indexPath = IndexPath(row: row, section: 0)
-		let indexPathOneUp = IndexPath(row: rowToGoUp, section: 0)
 		
 //		if !upperHalfVisibleIndexPath.contains(indexPath) && !lastRows.contains(indexPath)  {
 //			tableView.scrollToRow(at: indexPathOneUp, at: UITableView.ScrollPosition.top, animated: true)
 //		}
-		print("Last Path visible: \(lastVisibleIndexPath.map{$0.row}), and row is \(row)")
-		if !lastVisibleIndexPath.contains(indexPath) {
-			tableView.scrollToRow(at: indexPathOneUp, at: UITableView.ScrollPosition.top, animated: true)
+//		print("Last Path visible: \(lastVisibleIndexPath.map{$0.row}), and row is \(row)")
+//		if !lastVisibleIndexPath.contains(indexPath) {
+//			tableView.scrollToRow(at: indexPathOneUp, at: UITableView.ScrollPosition.top, animated: true)
+//		}
+		
+//		print("Visible cells: \(visibleCells), and row is \(row)")
+		if currentCell == nil  {
+			print("CurrentCell is nil: \(currentCell)")
+			tableView.scrollToRow(at: indexPath, at: UITableView.ScrollPosition.top, animated: true)
+			lastCellDone = false
 		}
 		print("##############################")
 	}
@@ -959,6 +997,7 @@ class ScoreViewController: MotherViewController {
 					tableView.reloadData()
 				}
 			}
+			setRowPositionToCenter()
 		}
 	}
 	@IBAction func oneStepback(_ sender: Any) {
