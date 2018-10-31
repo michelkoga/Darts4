@@ -194,7 +194,7 @@ class MotherViewController: UIViewController {
 	var inputHolder = ""
 	// ********** 1 Players Turn Pointer: **********
 	var teamTurn = 0
-	var row = 0
+	var row = 1
 	
 	var toGoesA = [Int?]()
 	var toGoesB = [Int?]()

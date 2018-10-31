@@ -145,111 +145,8 @@
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xth-dj-BGe" customClass="ScoreboardTableView" customModule="Darts4" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="50" width="814" height="742"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <view key="tableHeaderView" contentMode="scaleToFill" id="QXb-cw-Klm">
-                                                    <rect key="frame" x="0.0" y="0.0" width="814" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rnQ-8V-Afv">
-                                                            <rect key="frame" x="0.0" y="0.0" width="814" height="40"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Name" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Orh-kQ-92O" customClass="BoardLabel" customModule="Darts4" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="116.5" height="40"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                    <variation key="heightClass=regular-widthClass=compact" hidden="YES">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    </variation>
-                                                                    <variation key="heightClass=regular-widthClass=regular" hidden="NO">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    </variation>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="GVa-gF-wRL" customClass="CrossedLabel" customModule="Darts4" customModuleProvider="target">
-                                                                    <rect key="frame" x="116.5" y="0.0" width="116" height="40"/>
-                                                                    <color key="backgroundColor" white="0.070000000000000007" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                    <variation key="heightClass=regular-widthClass=compact">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    </variation>
-                                                                    <variation key="heightClass=regular-widthClass=regular">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                                    </variation>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="749" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PSY-4J-rEZ" customClass="BoardLabel" customModule="Darts4" customModuleProvider="target">
-                                                                    <rect key="frame" x="232.5" y="0.0" width="116.5" height="40"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                    <variation key="heightClass=regular-widthClass=compact">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    </variation>
-                                                                    <variation key="heightClass=regular-widthClass=regular">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                                    </variation>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="748" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cZ7-7e-wcf" customClass="turnLabel" customModule="Darts4" customModuleProvider="target">
-                                                                    <rect key="frame" x="349" y="0.0" width="116" height="40"/>
-                                                                    <color key="backgroundColor" white="0.070000000000000007" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                    <color key="textColor" red="0.2784313725" green="0.70588235290000001" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                    <variation key="heightClass=regular-widthClass=compact">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                    </variation>
-                                                                    <variation key="heightClass=regular-widthClass=regular">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                                    </variation>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="749" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="1GF-Hg-p8Z" customClass="CrossedLabel" customModule="Darts4" customModuleProvider="target">
-                                                                    <rect key="frame" x="465" y="0.0" width="116.5" height="40"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                    <variation key="heightClass=regular-widthClass=compact">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    </variation>
-                                                                    <variation key="heightClass=regular-widthClass=regular">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                                    </variation>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xba-c3-Nox" customClass="BoardLabel" customModule="Darts4" customModuleProvider="target">
-                                                                    <rect key="frame" x="581.5" y="0.0" width="116" height="40"/>
-                                                                    <color key="backgroundColor" white="0.070000000000000007" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                    <variation key="heightClass=regular-widthClass=compact">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    </variation>
-                                                                    <variation key="heightClass=regular-widthClass=regular">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                                    </variation>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Name" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnF-Ol-ZnN" customClass="BoardLabel" customModule="Darts4" customModuleProvider="target">
-                                                                    <rect key="frame" x="697.5" y="0.0" width="116.5" height="40"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                    <variation key="heightClass=regular-widthClass=compact" hidden="YES">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                    </variation>
-                                                                    <variation key="heightClass=regular-widthClass=regular" hidden="NO"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstItem="rnQ-8V-Afv" firstAttribute="top" secondItem="QXb-cw-Klm" secondAttribute="top" id="G3q-ar-qHL"/>
-                                                        <constraint firstAttribute="bottom" secondItem="rnQ-8V-Afv" secondAttribute="bottom" id="dbU-TT-Zv0"/>
-                                                        <constraint firstAttribute="trailing" secondItem="rnQ-8V-Afv" secondAttribute="trailing" id="er7-JI-ezC"/>
-                                                        <constraint firstItem="rnQ-8V-Afv" firstAttribute="leading" secondItem="QXb-cw-Klm" secondAttribute="leading" id="mMX-4p-5hP"/>
-                                                    </constraints>
-                                                </view>
                                                 <view key="tableFooterView" contentMode="scaleToFill" id="8pC-2b-gtw">
-                                                    <rect key="frame" x="0.0" y="112" width="814" height="50"/>
+                                                    <rect key="frame" x="0.0" y="72" width="814" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N35-Mk-E8P">
@@ -405,7 +302,7 @@
                                                 </view>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScoreCell" id="hnX-RE-88R" customClass="ScoresCell" customModule="Darts4" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="68" width="814" height="44"/>
+                                                        <rect key="frame" x="0.0" y="28" width="814" height="44"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hnX-RE-88R" id="H7j-ju-3lB">
                                                             <rect key="frame" x="0.0" y="0.0" width="814" height="43.5"/>
@@ -925,13 +822,6 @@
                         <outlet property="footerFinishALabel" destination="0Bx-H6-otb" id="MNZ-3j-4a8"/>
                         <outlet property="footerFinishBLabel" destination="cFu-Kz-xHJ" id="nM1-1i-vQ1"/>
                         <outlet property="goToStatsButton" destination="78i-YW-lra" id="Dmq-4r-rKa"/>
-                        <outlet property="headerAName" destination="Orh-kQ-92O" id="bWv-mT-ohO"/>
-                        <outlet property="headerAScore" destination="GVa-gF-wRL" id="2i7-OB-eBg"/>
-                        <outlet property="headerAToGo" destination="PSY-4J-rEZ" id="bk8-V6-p6a"/>
-                        <outlet property="headerBName" destination="UnF-Ol-ZnN" id="WPu-i3-Brr"/>
-                        <outlet property="headerBScore" destination="1GF-Hg-p8Z" id="dH5-IB-pi8"/>
-                        <outlet property="headerBToGo" destination="Xba-c3-Nox" id="351-MW-1vc"/>
-                        <outlet property="headerCenter" destination="cZ7-7e-wcf" id="iQq-26-XBR"/>
                         <outlet property="headerCenterLabel" destination="syQ-tQ-E7I" id="282-5f-1Pc"/>
                         <outlet property="hiddenView" destination="9QX-NT-9dm" id="5lN-uy-sId"/>
                         <outlet property="hideKeyboardButton" destination="vOX-Vm-RJX" id="ydq-ab-5RT"/>

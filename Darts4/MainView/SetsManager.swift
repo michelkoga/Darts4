@@ -140,10 +140,12 @@ extension ScoreViewController {
 	}
 	func updateTableView() -> [Set] {
 		var tempSets: [Set] = []
-		
+		 //Set the new header:
+		let headerSet = Set.init(playerA: "", playerB: "", scoreA: "", scoreB: "", toGoA: String(startingToGo), toGoB: String(startingToGo), turnNumber: "0", isBurst: false, isLast: false)
+		tempSets.append(headerSet)
 		// Insert turn labels:
 		var turn = 3
-		for i in 0..<scoresA.count {
+		for i in 1..<scoresA.count {
 			var scoreA = ""
 			var scoreB = ""
 			if scoresA[i] != nil { scoreA = String(scoresA[i]!) }
@@ -174,12 +176,12 @@ extension ScoreViewController {
 		}
 		// Insert player Names:
 		let indexA = playersA.count - 1
-		var index = 0
-		for i in 0..<scoresA.count {
+		var index = 1
+		for i in 1..<scoresA.count {
 			tempSets[i].playerA = playersA[index]
 			tempSets[i].playerB = playersB[index]
 			if index < indexA { index += 1 }
-			else { index = 0 }
+			else { index = 1 }
 		}
 //		// Add One More Set(Center):
 //		let centerSet: Set = Set(playerA: "", playerB: "", scoreA: "", scoreB: "", toGoA: "", toGoB: "", turnNumber: "C", isBurst: false, isLast: false)
@@ -191,20 +193,20 @@ extension ScoreViewController {
 		if finishA != 0 { // A wins
 			footerFinishALabel.text = "X\(finishA)"
 			if leg % 2 != 0 { // odd legs
-				footerALabel.text = "\((row ) * 3 + finishA)d"  // start A, A wins
-				footerBLabel.text = "\((row) * 3)d"
+				footerALabel.text = "\((row - 1) * 3 + finishA)d"  // start A, A wins
+				footerBLabel.text = "\((row - 1) * 3)d"
 			} else {
-				footerALabel.text = "\((row) * 3 + finishA)d" // start B, A wins
-				footerBLabel.text = "\((row + 1) * 3)d"
+				footerALabel.text = "\((row - 1) * 3 + finishA)d" // start B, A wins
+				footerBLabel.text = "\((row) * 3)d"
 			}
 		} else if finishB != 0 {
 			footerFinishBLabel.text = "X\(finishB)"
 			if leg % 2 != 0 { // odd legs
-				footerALabel.text = "\((row + 1) * 3)d" // start A, B wins
-				footerBLabel.text = "\((row) * 3 + finishB)d"
+				footerALabel.text = "\((row) * 3)d" // start A, B wins
+				footerBLabel.text = "\((row - 1) * 3 + finishB)d"
 			} else {
-				footerALabel.text = "\((row) * 3)d" // start B, B wins
-				footerBLabel.text = "\((row) * 3 + finishB)d"
+				footerALabel.text = "\((row - 1) * 3)d" // start B, B wins
+				footerBLabel.text = "\((row - 1) * 3 + finishB)d"
 			}
 		}
 	}
@@ -212,12 +214,12 @@ extension ScoreViewController {
 		print("setFinish(winner: String)")
 		if winner == "A" { // A wins
 			footerFinishALabel.text = "X\(1)"
-			footerALabel.text = "\((row + 1) * 3 + 1)d"  // start A, A wins
-			footerBLabel.text = "\((row + 1) * 3)d"
+			footerALabel.text = "\((row) * 3 + 1)d"  // start A, A wins
+			footerBLabel.text = "\((row) * 3)d"
 		} else {
 			footerFinishBLabel.text = "X\(1)"
-			footerALabel.text = "\((row + 1) * 3)d"  // start A, A wins
-			footerBLabel.text = "\((row + 1) * 3 + 1)d"
+			footerALabel.text = "\((row) * 3)d"  // start A, A wins
+			footerBLabel.text = "\((row) * 3 + 1)d"
 		}
 	}
 }

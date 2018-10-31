@@ -49,13 +49,13 @@ class ScoreViewController: MotherViewController {
 //	@IBOutlet weak var labelBName: BoardLabel! // Don't need
 	
 	
-	@IBOutlet weak var headerAName: BoardLabel!
-	@IBOutlet weak var headerAScore: BoardLabel!
-	@IBOutlet weak var headerAToGo: BoardLabel! // Check
-	@IBOutlet weak var headerCenter: BoardLabel!
-	@IBOutlet weak var headerBScore: BoardLabel!
-	@IBOutlet weak var headerBToGo: BoardLabel! // Check
-	@IBOutlet weak var headerBName: BoardLabel!
+//	@IBOutlet weak var headerAName: BoardLabel!
+//	@IBOutlet weak var headerAScore: BoardLabel!
+//	@IBOutlet weak var headerAToGo: BoardLabel! // Check
+//	@IBOutlet weak var headerCenter: BoardLabel!
+//	@IBOutlet weak var headerBScore: BoardLabel!
+//	@IBOutlet weak var headerBToGo: BoardLabel! // Check
+//	@IBOutlet weak var headerBName: BoardLabel!
 	
 	
 	// Table View:
@@ -132,7 +132,7 @@ class ScoreViewController: MotherViewController {
 			// Add Leg:
 			player.legs += 1
 			// Add Scores:
-			for index in 0...(row) {
+			for index in 1...(row) {
 				if sets[index].playerA == player.name {
 					if let score = Int(sets[index].scoreA) {
 						playersToSaveA[ind].scores.append(score)
@@ -153,7 +153,7 @@ class ScoreViewController: MotherViewController {
 			// Add Leg:
 			player.legs += 1
 			// Add Scores:
-			for index in 0...(row) {
+			for index in 1...(row) {
 				if sets[index].playerB == player.name {
 					if let score = Int(sets[index].scoreB) {
 						playersToSaveB[ind].scores.append(score)
@@ -516,8 +516,8 @@ class ScoreViewController: MotherViewController {
 
 		stateA = Array(repeating: 0, count: turnsNumber)
 		stateB = Array(repeating: 0, count: turnsNumber)
-		headerAToGo.text = String(startingToGo)
-		headerBToGo.text = String(startingToGo)
+//		headerAToGo.text = String(startingToGo)
+//		headerBToGo.text = String(startingToGo)
 		
 		
 		// Above Hearder Labels:
@@ -530,10 +530,10 @@ class ScoreViewController: MotherViewController {
 		}
 		
 		// Header Labels:
-		headerAName.text = Language.name
-		headerBName.text = Language.name
-		toGoesA[0] = Int(headerAToGo.text!) ?? 251
-		toGoesB[0] = Int(headerBToGo.text!) ?? 251
+//		headerAName.text = Language.name
+//		headerBName.text = Language.name
+//		toGoesA[0] = Int(headerAToGo.text!) ?? 251
+//		toGoesB[0] = Int(headerBToGo.text!) ?? 251
 		
 		// Keyboard Labels:
 		oneStepBackButton.setTitle(Language.back, for: [.normal,.disabled,.focused,.highlighted,.selected])
@@ -760,7 +760,7 @@ class ScoreViewController: MotherViewController {
 		finishB = 0
 		leg += 1
 		resetArrays()
-		row = 0
+		row = 1
 		if leg % 2 == 0 { teamTurn = 1 } else { teamTurn = 0 }
 		sets = updateTableView()
 		tableView.reloadData()
@@ -778,7 +778,7 @@ class ScoreViewController: MotherViewController {
 		finishA = 0
 		finishB = 0
 		resetArrays()
-		row = 0
+		row = 1
 		teamTurn = 0
 		sets = updateTableView()
 		tableView.reloadData()
@@ -942,7 +942,6 @@ class ScoreViewController: MotherViewController {
 		}
 	}
 	@IBAction func enterKeyPressed(_ sender: Any) {
-		print(row)
 		if isNotGameOver {
 			gameStarted = true
 			if inputHolder != "" {

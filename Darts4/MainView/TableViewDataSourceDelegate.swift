@@ -69,6 +69,12 @@ extension ScoreViewController: UITableViewDataSource, UITableViewDelegate {
 			}
 		}
 		
+		// Draw cross for non used cells:
+		if indexPath.row == 0 {
+			print("Drawing Cross")
+			cell.scoreA.drawCross()
+			cell.scoreB.drawCross()
+		}
 		cell.setSet(set: set)
 		
 		return cell
