@@ -20,7 +20,7 @@ class ScoreViewController: MotherViewController {
 	// Constraints:
 //	@IBOutlet weak var tableViewBottomConstraints: NSLayoutConstraint!
 //	@IBOutlet weak var keyboardTopConstraint: NSLayoutConstraint!
-	@IBOutlet weak var keyboardHeightConstraint: NSLayoutConstraint!
+//	@IBOutlet weak var keyboardHeightConstraint: NSLayoutConstraint!
 //	@IBOutlet weak var keyboardBottomConstraint: NSLayoutConstraint!
 	
 //	@IBOutlet weak var keyboardHeight: NSLayoutConstraint!
@@ -387,14 +387,14 @@ class ScoreViewController: MotherViewController {
 	func hideKeyboard() {
 //		keyboardTopConstraint.constant = 0
 //		tableViewBottomConstraints.constant = 0
-		keyboardHeightConstraint.constant = 0
+//		keyboardHeightConstraint.constant = 0
 //		keyboardBottomConstraint.constant = 250
 		
 //		keyboardView.isHidden = true
-		
-		UIView.animate(withDuration: 0.3, animations: {
-			self.view.layoutIfNeeded()
-		})
+		keyboardView.isHidden = true
+//		UIView.animate(withDuration: 0.3, animations: {
+//			self.view.layoutIfNeeded()
+//		})
 		
 	}
 	func showKeyboard() {
@@ -403,10 +403,12 @@ class ScoreViewController: MotherViewController {
 //		keyboardHeightConstraint.constant = 250
 //		keyboardBottomConstraint.constant = 0
 		
-		keyboardHeightConstraint.constant = 200
-		UIView.animate(withDuration: 0.3, animations: {
-			self.view.layoutIfNeeded()
-		})
+//		keyboardHeightConstraint.constant = 200
+		
+		keyboardView.isHidden = false
+//		UIView.animate(withDuration: 0.3, animations: {
+//			self.view.layoutIfNeeded()
+//		})
 	}
 	func showShowKeyboard() {
 		showKeyboardView.isHidden = false
@@ -492,8 +494,14 @@ class ScoreViewController: MotherViewController {
 //		createTestData()
 		
 	}
+	override func viewDidAppear(_ animated: Bool) {
+		initialNumberOfVisibleRows = (tableView?.indexPathsForVisibleRows?.count)!
+			/ 2
+	}
 	override func viewWillAppear(_ animated: Bool) {
 		resetArrays()
+		
+		
 		// Navigator View:
 		self.title = Language.darts
 		self.goToStatsButton.title = Language.stats
@@ -761,7 +769,9 @@ class ScoreViewController: MotherViewController {
 		gameStarted = false
 		hideHiddenView()
 		showKeyboard()
+		
 		inputHolder = ""
+		scrollToFirstRoll()
 	}
 	func resetGame() {
 		resetFooter()
@@ -781,6 +791,11 @@ class ScoreViewController: MotherViewController {
 		leg = 1 //The number of legs
 		inputHolder = ""
 		rightNavigatorButton.title = Language.settings
+		scrollToFirstRoll()
+	}
+	func scrollToFirstRoll() {
+		let indexPath = IndexPath(row: 0, section: 0)
+		tableView.scrollToRow(at: indexPath, at: UITableView.ScrollPosition.top, animated: true)
 	}
 	func resetFooter() {
 		footerALabel.text = ""
@@ -841,10 +856,43 @@ class ScoreViewController: MotherViewController {
 		resetAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
 		present(resetAlert, animated: true, completion: nil)
 	}
+	var initialNumberOfVisibleRows = 4
 	func setRowPositionToCenter() {
-		let indexPath = IndexPath(row: row, section: 0)
+		let visibleRows = tableView.indexPathsForVisibleRows!
+		print("VisibleRows: \(visibleRows.map{$0.row})")
+//		let halfElements = (visibleRows.count) / 2
+//		let upperHalfVisibleIndexPath = Array(visibleRows.dropLast(halfElements))
+//		let bottomHalfVisibleIndexPath = Array(visibleRows.dropFirst(halfElements))
 		
-		tableView.scrollToRow(at: indexPath, at: UITableView.ScrollPosition.top, animated: true)
+		
+		var lastVisibleIndexPath = [IndexPath]()
+		// Get my range
+		for (index,firsts) in visibleRows.enumerated() {
+			lastVisibleIndexPath.append(firsts)
+			if index == 4 { break } // Limit to only 6 indexPaths
+		}
+		
+//		let numberOfRows = tableView.numberOfRows(inSection: 0)
+//		let lastIndexPath = IndexPath(row: (numberOfRows - 1), section: 0)
+//		var  lastRows = [IndexPath]()
+//		for halfRow in 0...halfElements {
+//			let newRow = numberOfRows - halfRow
+//			let indexP = IndexPath(row: newRow, section: 0)
+//			lastRows.append(indexP)  //cellForRow(at: IndexPath(row: newRow, section: 0)))
+//		}
+		var rowToGoUp = row - 1
+		if rowToGoUp == -1 { rowToGoUp = 0 } // Avoiding negative row
+		let indexPath = IndexPath(row: row, section: 0)
+		let indexPathOneUp = IndexPath(row: rowToGoUp, section: 0)
+		
+//		if !upperHalfVisibleIndexPath.contains(indexPath) && !lastRows.contains(indexPath)  {
+//			tableView.scrollToRow(at: indexPathOneUp, at: UITableView.ScrollPosition.top, animated: true)
+//		}
+		print("Last Path visible: \(lastVisibleIndexPath.map{$0.row}), and row is \(row)")
+		if !lastVisibleIndexPath.contains(indexPath) {
+			tableView.scrollToRow(at: indexPathOneUp, at: UITableView.ScrollPosition.top, animated: true)
+		}
+		print("##############################")
 	}
 	// #######################################
 	// #######################################
@@ -870,6 +918,7 @@ class ScoreViewController: MotherViewController {
 	}
 	@IBAction func burst(_ sender: Any) {
 		setBurst()
+		setRowPositionToCenter()
 	}
 	@IBAction func xDarts(_ sender: Any) {
 		askDartsNumber()
@@ -881,6 +930,7 @@ class ScoreViewController: MotherViewController {
 			sets = updateTableView()
 			tableView.reloadData()
 		}
+		setRowPositionToCenter()
 	}
 	@IBAction func clearKeyPressed(_ sender: Any) {
 		if isGameOver == false {
@@ -914,6 +964,7 @@ class ScoreViewController: MotherViewController {
 	}
 	@IBAction func oneStepback(_ sender: Any) {
 		oneStepBack()
+		setRowPositionToCenter()
 	}
 	@IBAction func hideKeyboardAction(_ sender: Any) {
 		hideKeyboard()

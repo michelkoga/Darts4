@@ -542,7 +542,6 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="Xth-dj-BGe" secondAttribute="bottom" id="Iim-Bl-Yvr"/>
                                             <constraint firstAttribute="trailing" secondItem="CCj-bd-hu1" secondAttribute="trailing" id="J7d-m3-BM7"/>
                                             <constraint firstItem="CCj-bd-hu1" firstAttribute="leading" secondItem="uL5-9K-Hut" secondAttribute="leading" id="SrN-lQ-b5Q"/>
                                             <constraint firstAttribute="trailing" secondItem="Xth-dj-BGe" secondAttribute="trailing" constant="10" id="Stq-1D-O86">
@@ -553,6 +552,7 @@
                                             </constraint>
                                             <constraint firstItem="CCj-bd-hu1" firstAttribute="top" secondItem="uL5-9K-Hut" secondAttribute="top" id="hkU-kq-yb7"/>
                                             <constraint firstItem="Xth-dj-BGe" firstAttribute="top" secondItem="CCj-bd-hu1" secondAttribute="bottom" id="vqY-Wq-6yX"/>
+                                            <constraint firstAttribute="bottom" secondItem="Xth-dj-BGe" secondAttribute="bottom" id="xa7-rc-bh2"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JyE-Z3-Wt2" customClass="KeyboardView" customModule="Darts4" customModuleProvider="target">
@@ -945,7 +945,6 @@
                         <outlet property="key7" destination="a87-63-PcH" id="gBA-ao-2FA"/>
                         <outlet property="key8" destination="TTQ-lB-U0b" id="2f6-zv-gJ3"/>
                         <outlet property="key9" destination="5dS-O3-5MW" id="928-mB-36v"/>
-                        <outlet property="keyboardHeightConstraint" destination="Wp5-qq-qp2" id="Odl-h5-7Gd"/>
                         <outlet property="keyboardView" destination="JyE-Z3-Wt2" id="JaI-G3-FPo"/>
                         <outlet property="labelAScore" destination="dhf-aV-XUZ" id="BHa-08-8wc"/>
                         <outlet property="labelAToGo" destination="0L2-oV-QoD" id="WEJ-kO-kdQ"/>

@@ -50,6 +50,8 @@ extension ScoreViewController {
 		if leg % 2 == 0 {
 			if teamTurn == 1 {
 				teamTurn = 0
+				
+				
 			} else {
 				if row < (turnsNumber - 1) {
 					row += 1

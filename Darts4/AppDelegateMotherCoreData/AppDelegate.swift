@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 				print("Error")
 			}
 		})
-		sleep(3)
+//		sleep(3)
 		return true
 	}
 
