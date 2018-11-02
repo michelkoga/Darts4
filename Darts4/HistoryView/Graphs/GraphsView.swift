@@ -11,6 +11,7 @@ import CoreData
 
 class GraphsView: MotherGraphsView {
 	var isLandscape = false
+	var deviceFactor: CGFloat = 1
 	var graphWidth: CGFloat = 1.0
 	func fetchAllPlayers()  {
 		guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
@@ -26,12 +27,20 @@ class GraphsView: MotherGraphsView {
 	}
 	override func draw(_ rect: CGRect) {
 		super.draw(rect)
+		switch UIDevice.current.model {
+		case "iPhone":
+			deviceFactor = 1
+		case "iPad":
+			deviceFactor = 2
+		default:
+			break
+		}
 		if self.isLandscape {
 			print("Is Landscape")
-			graphWidth = 0.5
+			graphWidth = 0.5 * deviceFactor
 		} else {
 			print("Is not Landscape")
-			graphWidth = 0.3
+			graphWidth = 0.3 * deviceFactor
 		}
 		
 		// min max
