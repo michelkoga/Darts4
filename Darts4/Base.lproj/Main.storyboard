@@ -736,10 +736,10 @@
                                 </subviews>
                             </stackView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9QX-NT-9dm">
-                                <rect key="frame" x="0.0" y="812" width="834" height="300"/>
+                                <rect key="frame" x="287" y="980" width="260" height="72"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TC9-JV-ToD" customClass="BiggestButton" customModule="Darts4" customModuleProvider="target">
-                                        <rect key="frame" x="287" y="168" width="260" height="72"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="72"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="z0d-px-RgG"/>
@@ -755,9 +755,10 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="jJy-4W-bWM"/>
+                                    <constraint firstAttribute="width" constant="260" id="dgR-y8-9BX"/>
+                                    <constraint firstAttribute="height" constant="72" id="jJy-4W-bWM"/>
                                     <constraint firstItem="TC9-JV-ToD" firstAttribute="centerX" secondItem="9QX-NT-9dm" secondAttribute="centerX" id="orC-t8-Prz"/>
-                                    <constraint firstAttribute="bottom" secondItem="TC9-JV-ToD" secondAttribute="bottom" constant="60" id="zgE-He-sKu"/>
+                                    <constraint firstAttribute="bottom" secondItem="TC9-JV-ToD" secondAttribute="bottom" id="zgE-He-sKu"/>
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5M-fK-mRq">
@@ -789,13 +790,12 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="I5M-fK-mRq" secondAttribute="bottom" id="6wi-Lx-GG0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9QX-NT-9dm" secondAttribute="trailing" id="aSF-oV-xqE"/>
+                            <constraint firstItem="9QX-NT-9dm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fwB-1m-YY5"/>
                             <constraint firstItem="G7H-tn-ZGu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="g3e-1P-gOE"/>
                             <constraint firstItem="I5M-fK-mRq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gRc-sL-qHj"/>
                             <constraint firstItem="G7H-tn-ZGu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kKO-qK-JfQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="G7H-tn-ZGu" secondAttribute="bottom" id="oTp-xu-50O"/>
-                            <constraint firstItem="9QX-NT-9dm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="twA-be-8PF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9QX-NT-9dm" secondAttribute="bottom" id="ws8-9o-8nA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9QX-NT-9dm" secondAttribute="bottom" constant="60" id="ws8-9o-8nA"/>
                             <constraint firstItem="G7H-tn-ZGu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xLP-uj-fo0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
