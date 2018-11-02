@@ -10,7 +10,8 @@ import UIKit
 import CoreData
 
 class GraphsView: MotherGraphsView {
-	
+	var isLandscape = false
+	var graphWidth: CGFloat = 1.0
 	func fetchAllPlayers()  {
 		guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
 		let context = appDelegate.persistentContainer.viewContext
@@ -25,7 +26,13 @@ class GraphsView: MotherGraphsView {
 	}
 	override func draw(_ rect: CGRect) {
 		super.draw(rect)
-		
+		if self.isLandscape {
+			print("Is Landscape")
+			graphWidth = 0.5
+		} else {
+			print("Is not Landscape")
+			graphWidth = 0.3
+		}
 		
 		// min max
 		let minX: CGFloat = self.layer.bounds.minX
@@ -77,7 +84,7 @@ class GraphsView: MotherGraphsView {
 			let unit = maxX / CGFloat(matchesAverages.count)
 			
 			let graph = UIGraphicsGetCurrentContext()
-			graph?.setLineWidth(2)
+			graph?.setLineWidth(graphWidth * 2)
 			graph?.setStrokeColor(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1))
 			// preprare first value:
 			let newY = (CGFloat(matchesAverages[0] - smallestAverage) * yUnit) + 10
@@ -96,9 +103,9 @@ class GraphsView: MotherGraphsView {
 				
 				let line = UIGraphicsGetCurrentContext()
 				if multiplier % 5 == 0 {
-					line?.setLineWidth(0.7)
+					line?.setLineWidth(0.7 * graphWidth)
 				} else {
-					line?.setLineWidth(0.2)
+					line?.setLineWidth(0.2 * graphWidth)
 				}
 				line?.setStrokeColor(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1))
 				line?.move(to: startPoint)
@@ -115,26 +122,26 @@ class GraphsView: MotherGraphsView {
 				let endPoint = CGPoint(x: maxX, y: invertedY)
 				
 				let line = UIGraphicsGetCurrentContext()
-				line?.setLineWidth(1)
+				line?.setLineWidth(graphWidth)
 				line?.setStrokeColor(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
 				switch multiplier {
 				case 30:
-					line?.setLineWidth(2)
+					line?.setLineWidth(2 * graphWidth)
 					line?.setStrokeColor(#colorLiteral(red: 1, green: 0.8323456645, blue: 0.4732058644, alpha: 1))
 				case 50:
-					line?.setLineWidth(2)
+					line?.setLineWidth(2 * graphWidth)
 					line?.setStrokeColor(#colorLiteral(red: 0.8446564078, green: 0.5145705342, blue: 1, alpha: 1))
 				case 70:
-					line?.setLineWidth(2)
+					line?.setLineWidth(2 * graphWidth)
 					line?.setStrokeColor(#colorLiteral(red: 1, green: 0.4932718873, blue: 0.4739984274, alpha: 1))
 				case 100:
-					line?.setLineWidth(2)
+					line?.setLineWidth(2 * graphWidth)
 					line?.setStrokeColor(#colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1))
 				case 120:
-					line?.setLineWidth(2)
+					line?.setLineWidth(2 * graphWidth)
 					line?.setStrokeColor(#colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1))
 				case 140:
-					line?.setLineWidth(2)
+					line?.setLineWidth(2 * graphWidth)
 					line?.setStrokeColor(#colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1))
 				default:
 					break
@@ -148,7 +155,7 @@ class GraphsView: MotherGraphsView {
 			let endMidPoint = CGPoint(x: maxX, y: invertedAverageY)
 			
 			let midLine = UIGraphicsGetCurrentContext()
-			midLine?.setLineWidth(2)
+			midLine?.setLineWidth(2 * graphWidth)
 			midLine?.setStrokeColor(#colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1))
 			midLine?.move(to: startMidPoint)
 			midLine?.addLine(to: endMidPoint)
@@ -189,7 +196,7 @@ class GraphsView: MotherGraphsView {
 			let rectPoint4 = CGPoint(x: maxX, y: minY)
 			
 			let rectLine = UIGraphicsGetCurrentContext()
-			rectLine?.setLineWidth(4)
+			rectLine?.setLineWidth(4 * graphWidth)
 			rectLine?.setStrokeColor(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
 			
 			rectLine?.move(to: rectPoint1)

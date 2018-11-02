@@ -926,7 +926,7 @@ class ScoreViewController: MotherViewController {
 		
 //		print("Visible cells: \(visibleCells), and row is \(row)")
 		if currentCell == nil  {
-			print("CurrentCell is nil: \(currentCell)")
+//			print("CurrentCell is nil: \(currentCell)")
 			tableView.scrollToRow(at: indexPath, at: UITableView.ScrollPosition.top, animated: true)
 			lastCellDone = false
 		}

@@ -49,6 +49,15 @@ class HistoryDisplayViewController: MotherViewController {
 		setLabelsTitles()
 		tableView.reloadData()
 	}
+	override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+		if UIDevice.current.orientation.isLandscape {
+			print("Is Landscape.")
+			graphView.isLandscape = true
+		} else {
+			graphView.isLandscape = false
+		}
+		graphView.setNeedsDisplay()
+	}
 	func setLabelsTitles() {
 		// Navigator:
 		title = Language.stats
