@@ -142,9 +142,10 @@
                                                     <constraint firstAttribute="bottom" secondItem="fzX-Js-nsd" secondAttribute="bottom" id="oRv-Om-7Kj"/>
                                                 </constraints>
                                             </view>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xth-dj-BGe" customClass="ScoreboardTableView" customModule="Darts4" customModuleProvider="target">
+                                            <tableView clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" sectionIndexMinimumDisplayRowCount="40" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xth-dj-BGe" customClass="ScoreboardTableView" customModule="Darts4" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="50" width="814" height="742"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <view key="tableFooterView" contentMode="scaleToFill" id="8pC-2b-gtw">
                                                     <rect key="frame" x="0.0" y="72" width="814" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -402,7 +403,7 @@
                                                                             </subviews>
                                                                         </stackView>
                                                                     </subviews>
-                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="bottom" secondItem="2S3-dJ-7Me" secondAttribute="bottom" id="96m-Xo-m84"/>
                                                                         <constraint firstAttribute="height" constant="50" id="FA2-iP-NwV"/>
@@ -800,7 +801,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Darts" id="XrM-xs-qGA">
+                    <navigationItem key="navigationItem" title="Darts" largeTitleDisplayMode="always" id="XrM-xs-qGA">
                         <barButtonItem key="leftBarButtonItem" title="History" id="78i-YW-lra">
                             <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             <connections>
@@ -844,12 +845,12 @@
                         <outlet property="oneStepBackButton" destination="b3n-lh-Taj" id="s4l-mx-iXP"/>
                         <outlet property="rightNavigatorButton" destination="bW9-TB-duc" id="yp4-5C-poB"/>
                         <outlet property="showKeyboardView" destination="I5M-fK-mRq" id="c3Z-9F-lno"/>
-                        <outlet property="tableView" destination="Xth-dj-BGe" id="MxS-Yk-1Ju"/>
+                        <outlet property="tableView" destination="Xth-dj-BGe" id="uFd-95-mtk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1619" y="124"/>
+            <point key="canvasLocation" x="1618.7050359712232" y="123.56115107913669"/>
         </scene>
         <!--Stats-->
         <scene sceneID="875-HJ-Fpf">

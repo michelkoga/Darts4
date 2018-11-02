@@ -25,13 +25,13 @@
 		DE3ABE102181BA6F003D3E84 /* MotherGraphsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3ABE0F2181BA6F003D3E84 /* MotherGraphsView.swift */; };
 		DE3ABE122181BA9F003D3E84 /* UnderGraphsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3ABE112181BA9F003D3E84 /* UnderGraphsView.swift */; };
 		DE3ABE142181BDA9003D3E84 /* TableViewDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3ABE132181BDA9003D3E84 /* TableViewDataSourceDelegate.swift */; };
+		DE450757218C6FA6006F2132 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE450756218C6FA6006F2132 /* Animations.swift */; };
 		DE4F1FAB216B8D7000607D29 /* ScoresCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F1FAA216B8D7000607D29 /* ScoresCell.swift */; };
 		DE4F1FAD216B8E0C00607D29 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F1FAC216B8E0C00607D29 /* Set.swift */; };
 		DE4F1FB1216B8F7200607D29 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F1FB0216B8F7200607D29 /* ScoreViewController.swift */; };
 		DE4F1FB3216B916500607D29 /* PlayerCoreDataFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4F1FB2216B916500607D29 /* PlayerCoreDataFunctions.swift */; };
 		DE78F216216BBA99000F12C9 /* PlayersTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE78F215216BBA99000F12C9 /* PlayersTableDelegate.swift */; };
 		DE9552F8217EF2D700F0243C /* GraphsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9552F7217EF2D700F0243C /* GraphsView.swift */; };
-		DE99EACF217DAE09001EFF61 /* GrandMotherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99EACE217DAE09001EFF61 /* GrandMotherViewController.swift */; };
 		DE99EAD1217DDB35001EFF61 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99EAD0217DDB35001EFF61 /* StatsViewController.swift */; };
 		DE99EAD3217DE61D001EFF61 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99EAD2217DE61D001EFF61 /* HistoryTableViewController.swift */; };
 		DEA8620E21730A010041EDA3 /* ScoreTableCellAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA8620D21730A010041EDA3 /* ScoreTableCellAssistant.swift */; };
@@ -70,13 +70,13 @@
 		DE3ABE0F2181BA6F003D3E84 /* MotherGraphsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherGraphsView.swift; sourceTree = "<group>"; };
 		DE3ABE112181BA9F003D3E84 /* UnderGraphsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderGraphsView.swift; sourceTree = "<group>"; };
 		DE3ABE132181BDA9003D3E84 /* TableViewDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceDelegate.swift; sourceTree = "<group>"; };
+		DE450756218C6FA6006F2132 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		DE4F1FAA216B8D7000607D29 /* ScoresCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresCell.swift; sourceTree = "<group>"; };
 		DE4F1FAC216B8E0C00607D29 /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
 		DE4F1FB0216B8F7200607D29 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		DE4F1FB2216B916500607D29 /* PlayerCoreDataFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCoreDataFunctions.swift; sourceTree = "<group>"; };
 		DE78F215216BBA99000F12C9 /* PlayersTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersTableDelegate.swift; sourceTree = "<group>"; };
 		DE9552F7217EF2D700F0243C /* GraphsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphsView.swift; sourceTree = "<group>"; };
-		DE99EACE217DAE09001EFF61 /* GrandMotherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrandMotherViewController.swift; sourceTree = "<group>"; };
 		DE99EAD0217DDB35001EFF61 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		DE99EAD2217DE61D001EFF61 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		DEA8620D21730A010041EDA3 /* ScoreTableCellAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableCellAssistant.swift; sourceTree = "<group>"; };
@@ -150,6 +150,7 @@
 			children = (
 				DE4F1FB0216B8F7200607D29 /* ScoreViewController.swift */,
 				DE1F29162184B932000F1F5E /* SetsManager.swift */,
+				DE450756218C6FA6006F2132 /* Animations.swift */,
 				DE3ABE132181BDA9003D3E84 /* TableViewDataSourceDelegate.swift */,
 				DE201F9D216CBE4500DDD686 /* ScoreboardTableView.swift */,
 				DE4F1FAA216B8D7000607D29 /* ScoresCell.swift */,
@@ -181,7 +182,6 @@
 		DE99EACD217D525F001EFF61 /* AppDelegateMotherCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				DE99EACE217DAE09001EFF61 /* GrandMotherViewController.swift */,
 				DE201F99216C6F6900DDD686 /* MotherViewController.swift */,
 				DE1C985F2169AD5E00A1E221 /* AppDelegate.swift */,
 				DE4F1FB2216B916500607D29 /* PlayerCoreDataFunctions.swift */,
@@ -329,6 +329,7 @@
 				DE4F1FAD216B8E0C00607D29 /* Set.swift in Sources */,
 				DEE8C54A21772AAD008C3F06 /* HistoryDisplayViewController.swift in Sources */,
 				DE1C98682169AD5E00A1E221 /* Darts4.xcdatamodeld in Sources */,
+				DE450757218C6FA6006F2132 /* Animations.swift in Sources */,
 				DEB13AA8216BAF9B00107DFD /* SearchTable.swift in Sources */,
 				DE201FA0216CCE5800DDD686 /* SettingsLabels.swift in Sources */,
 				DEE8C54D21772DF1008C3F06 /* HistoryTableViewCell.swift in Sources */,
@@ -351,7 +352,6 @@
 				DE3ABE142181BDA9003D3E84 /* TableViewDataSourceDelegate.swift in Sources */,
 				DEA862102174744E0041EDA3 /* Languages.swift in Sources */,
 				DE201F9A216C6F6900DDD686 /* MotherViewController.swift in Sources */,
-				DE99EACF217DAE09001EFF61 /* GrandMotherViewController.swift in Sources */,
 				DE78F216216BBA99000F12C9 /* PlayersTableDelegate.swift in Sources */,
 				DEE8C54821770824008C3F06 /* NavigationController.swift in Sources */,
 				DE35AA212183355B0092CF95 /* GrayLabel.swift in Sources */,

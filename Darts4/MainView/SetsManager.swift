@@ -222,4 +222,5 @@ extension ScoreViewController {
 			footerBLabel.text = "\((row) * 3 + 1)d"
 		}
 	}
+	
 }

@@ -59,7 +59,7 @@ class ScoreViewController: MotherViewController {
 	
 	
 	// Table View:
-	@IBOutlet weak var tableView: UITableView!
+	@IBOutlet weak var tableView: ScoreboardTableView!
 	
 	
 	// Numbers Pad:
@@ -481,7 +481,6 @@ class ScoreViewController: MotherViewController {
 		}
 	}
 	
-	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		Language.getLanguageDefaults()
@@ -726,6 +725,7 @@ class ScoreViewController: MotherViewController {
 		return true
 	}
 	func insertNumberToCurrentScore(_ value: String){
+		
 		// Testing if not bursting:
 		var testNumber = inputHolder
 		testNumber.append(value)
@@ -895,7 +895,7 @@ class ScoreViewController: MotherViewController {
 		let currentCell = tableView.cellForRow(at: indexPathOneDown)
 		
 		let visibleRows = tableView.indexPathsForVisibleRows!
-		print("VisibleRows: \(visibleRows.map{$0.row})")
+//		print("VisibleRows: \(visibleRows.map{$0.row})")
 //		let halfElements = (visibleRows.count) / 2
 //		let upperHalfVisibleIndexPath = Array(visibleRows.dropLast(halfElements))
 //		let bottomHalfVisibleIndexPath = Array(visibleRows.dropFirst(halfElements))
@@ -930,7 +930,7 @@ class ScoreViewController: MotherViewController {
 			tableView.scrollToRow(at: indexPath, at: UITableView.ScrollPosition.top, animated: true)
 			lastCellDone = false
 		}
-		print("##############################")
+//		print("##############################")
 	}
 	// #######################################
 	// #######################################

@@ -9,6 +9,7 @@
 import UIKit
 
 class ScoresCell: UITableViewCell {
+	var animatable = false
 	override func draw(_ rect: CGRect) {
 		super.draw(rect)
 //		let selectedColorView = UIView()
@@ -27,6 +28,19 @@ class ScoresCell: UITableViewCell {
 //				drawBCircle()
 //			}
 		}
+//		if self.text != "" {
+			//			if Int(self.text!) != nil {
+			//				if self.animateThis == true {
+			//					if Int(self.text!)! >= minBestScore {
+			////						self.drawCircle()
+			//						self.drawAnimatedEllipse()
+			//					}
+			//				}
+			//				else {
+			//					removeAnimation()
+			//				}
+			//			}
+			//		}
 		
 	}
 	func drawHorizontalLine() {
@@ -66,6 +80,7 @@ class ScoresCell: UITableViewCell {
 		context?.strokePath()
 		
 	}
+	@IBOutlet weak var graphicView: UIView!
 	
 	@IBOutlet weak var playerA: UILabel!
 	@IBOutlet weak var playerB: UILabel!

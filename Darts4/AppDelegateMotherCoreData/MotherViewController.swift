@@ -35,6 +35,7 @@ class MotherViewController: UIViewController {
 	
 	
 	// Basic Data:
+	
 	fileprivate func setMaxScore(for startingScore: Int) {
 		switch startingScore {
 		case 151, 251:

@@ -10,6 +10,7 @@ import UIKit
 
 class ScoreboardTableView: UITableView {
 	
+	@IBOutlet weak var contentView: UIView!
 	override func draw(_ rect: CGRect) {
 		super.draw(rect)
 		//self.setGradientBackground(colorOne: .blue, colorTwo: .green)
